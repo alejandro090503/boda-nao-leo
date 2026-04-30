@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
 <title>Naomi &amp; Leonardo · 07 Agosto 2026</title>
 <meta name="description" content="Nos casamos y queremos que estés ahí. Una noche especial en San Juan de Aragón, CDMX — 07 de Agosto 2026 · Abre tu invitación 💌">
-<meta property="og:type"        content="website">
-<meta property="og:url"         content="https://boda-nao-leo.vercel.app/">
-<meta property="og:title"       content="💌 Naomi &amp; Leonardo · 07 · Agosto · 2026">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://boda-nao-leo.vercel.app/">
+<meta property="og:title" content="💌 Naomi &amp; Leonardo · 07 · Agosto · 2026">
 <meta property="og:description" content="Nos casamos y queremos que estés ahí. Una noche especial en San Juan de Aragón, CDMX — 07 de Agosto 2026 ✉️">
-<meta property="og:image"       content="https://boda-nao-leo.vercel.app/og-image.jpg">
+<meta property="og:image" content="https://boda-nao-leo.vercel.app/og-image.jpg">
 <meta property="og:image:secure_url" content="https://boda-nao-leo.vercel.app/og-image.jpg">
-<meta property="og:image:type"  content="image/jpeg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt"   content="Sobre de invitación de Naomi y Leonardo">
-<meta property="og:locale"      content="es_MX">
-<meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:title"       content="💌 Naomi &amp; Leonardo · 07 · Agosto · 2026">
+<meta property="og:image:alt" content="Sobre de invitación de Naomi y Leonardo">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="💌 Naomi &amp; Leonardo · 07 · Agosto · 2026">
 <meta name="twitter:description" content="Nos casamos y queremos que estés ahí. Una noche especial en San Juan de Aragón, CDMX — 07 de Agosto 2026 ✉️">
-<meta name="twitter:image"       content="https://boda-nao-leo.vercel.app/og-image.jpg">
+<meta name="twitter:image" content="https://boda-nao-leo.vercel.app/og-image.jpg">
 <script>if('scrollRestoration' in history){history.scrollRestoration='manual';}window.scrollTo(0,0);</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,71 +27,47 @@
 <style>
 /* ── FLOREST MOTH PALETTE ── */
 :root{
-  --bg:#F5F2E8;        /* parchment cálido */
-  --accent:#83934D;    /* Espárrago · olive-sage */
-  --dark:#44562F;      /* Woodland · bosque profundo */
-  --text:#2C3520;      /* texto oscuro con matiz verde */
-  --surface:#EBE3BC;   /* Rafia · crema cálida */
-  --card:#FDFAF3;      /* blanco ligeramente cálido */
-  --blush:#EFBFB3;     /* Arena del Desierto · detalle floral */
-  --pine:#B8C88D;      /* Pine Glade · verde claro */
+  --bg:#F7F3EC;
+  --accent:#83934D;
+  --dark:#44562F;
+  --text:#2C3520;
+  --surface:#F0E8D5;
+  --card:#FEF6F2;      /* blush-tinted white */
+  --blush:#EFBFB3;
+  --blush2:#F5D4CC;
+  --pine:#B8C88D;
+  --rafia:#E9DFB4;
+  --blush-section:#FAF0EE; /* sections with blush wash */
 }
 
-/* ── RESET ── */
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{overflow-x:hidden;max-width:100vw}
 a,button,input,select,textarea{touch-action:manipulation}
 html{scroll-behavior:auto}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:'Lato',sans-serif;
-  font-weight:300;
-  -webkit-text-size-adjust:100%;
-  text-size-adjust:100%;
-}
+body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-weight:300;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 
 /* ── LOADER ── */
-#loader{display:none;position:fixed;inset:0;z-index:9999;
-  background:var(--bg);
-  flex-direction:column;align-items:center;justify-content:center;gap:18px;
-}
+#loader{display:none;position:fixed;inset:0;z-index:9999;background:var(--bg);flex-direction:column;align-items:center;justify-content:center;gap:18px;}
 #loader.active{display:flex}
-
-/* ── ENVELOPE OPENING SEQUENCE ── */
-#envelope-screen{position:fixed;inset:0;z-index:9000;background:#F5F2E8;overflow:hidden;cursor:pointer;}
-#envImage,#envVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
-#envImage{opacity:0}
-#envVideo{opacity:0}
-.env-tap{
-  position:absolute;bottom:72px;left:50%;transform:translateX(-50%);z-index:10;
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:16px;letter-spacing:5px;text-transform:uppercase;
-  color:#44562F;opacity:0;padding:16px 36px;white-space:nowrap;
-  border:1.8px solid rgba(68,86,47,.7);border-radius:50px;
-  background:rgba(255,255,255,.18);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
-  text-shadow:0 1px 8px rgba(255,255,255,.6);
-}
-.env-tap::before{
-  content:'';position:absolute;inset:0;border:1.5px solid rgba(68,86,47,.45);border-radius:50px;
-  animation:envpulse 2s ease-out infinite;
-}
-@keyframes envpulse{0%{transform:scale(1);opacity:.75}100%{transform:scale(1.28);opacity:0}}
-#env-flash{position:fixed;inset:0;z-index:9999;background:#fff;opacity:0;pointer-events:none;}
-.ld-mono{
-  font-family:'Great Vibes',cursive;font-size:78px;line-height:1;
-  background:linear-gradient(135deg,#44562F 0%,#83934D 45%,#44562F 100%);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:flex;
-}
+.ld-mono{font-family:'Great Vibes',cursive;font-size:78px;line-height:1;background:linear-gradient(135deg,#44562F 0%,#EFBFB3 45%,#83934D 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:flex;}
 .ld-mono span{display:inline-block}
 .ld-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;letter-spacing:3px;color:var(--accent);opacity:0;}
 
-/* ── BOTANICAL PARTICLES ── */
+/* ── ENVELOPE ── */
+#envelope-screen{position:fixed;inset:0;z-index:9000;background:#F5F2E8;overflow:hidden;cursor:pointer;}
+#envImage,#envVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
+#envImage{opacity:0}#envVideo{opacity:0}
+.env-tap{position:absolute;bottom:72px;left:50%;transform:translateX(-50%);z-index:10;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;letter-spacing:5px;text-transform:uppercase;color:#44562F;opacity:0;padding:16px 36px;white-space:nowrap;border:1.8px solid rgba(239,191,179,.8);border-radius:50px;background:rgba(255,255,255,.18);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);}
+.env-tap::before{content:'';position:absolute;inset:0;border:1.5px solid rgba(239,191,179,.5);border-radius:50px;animation:envpulse 2s ease-out infinite;}
+@keyframes envpulse{0%{transform:scale(1);opacity:.75}100%{transform:scale(1.28);opacity:0}}
+#env-flash{position:fixed;inset:0;z-index:9999;background:#fff;opacity:0;pointer-events:none;}
+
+/* ── PARTICLES ── */
 #petals{position:fixed;inset:0;z-index:20;pointer-events:none;overflow:hidden}
-.petal{position:absolute;top:-40px;will-change:transform}
-/* Leaf shape: usando border-radius asimétrico */
+.petal{position:absolute;top:-50px;will-change:transform}
 .petal.leaf{border-radius:50% 0 50% 0}
 .petal.oval{border-radius:50%}
+.petal.star{clip-path:polygon(50% 0%,56% 44%,100% 50%,56% 56%,50% 100%,44% 56%,0% 50%,44% 44%)}
 
 /* ── WRAP ── */
 .wrap{max-width:430px;margin:0 auto;overflow:hidden;position:relative;z-index:1;visibility:hidden;}
@@ -99,181 +75,218 @@ body{
 .sec{padding:72px 28px;position:relative}
 .sec--bg{background:var(--bg)}
 .sec--surface{background:var(--surface)}
+.sec--blush{background:var(--blush-section)}
 
-.eyebrow{
-  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:5px;
-  text-transform:uppercase;color:var(--accent);text-align:center;margin-bottom:10px;
-}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:var(--accent);text-align:center;margin-bottom:10px;}
 .script-title{font-family:'Great Vibes',cursive;font-size:52px;color:var(--dark);text-align:center;line-height:1.15;margin-bottom:4px;}
 
 /* ── SCROLL HINT ── */
 .scroll-hint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:12px;opacity:1;transition:opacity .7s ease;white-space:nowrap;}
 .scroll-hint.hidden{opacity:0;pointer-events:none}
 .scroll-hint-txt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:9px;padding-left:9px;text-transform:uppercase;color:var(--dark);display:flex;align-items:center;gap:14px;}
-.scroll-hint-txt::before,.scroll-hint-txt::after{content:'';display:block;width:28px;height:1px;background:linear-gradient(to right,transparent,var(--accent));opacity:.7;}
-.scroll-hint-txt::after{background:linear-gradient(to left,transparent,var(--accent));}
+.scroll-hint-txt::before,.scroll-hint-txt::after{content:'';display:block;width:28px;height:1px;background:linear-gradient(to right,transparent,var(--blush));opacity:.9;}
+.scroll-hint-txt::after{background:linear-gradient(to left,transparent,var(--blush));}
 .scroll-hint-arrow{display:flex;animation:scrollbounce 1.8s ease-in-out infinite;}
-.scroll-hint-arrow svg{width:28px;height:28px;stroke:var(--accent);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.scroll-hint-arrow svg{width:28px;height:28px;stroke:var(--blush);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round;}
 @keyframes scrollbounce{0%,100%{transform:translateY(0)}50%{transform:translateY(9px)}}
 
-/* ── ORNAMENT ── */
+/* ── ORNAMENTS ── */
 .ornament{display:flex;justify-content:center;padding:20px 0;background:var(--bg);}
-.ornament svg{width:280px;height:68px}
+.ornament svg{width:300px;height:auto}
 .ornament--surface{background:var(--surface)}
-.ornament--s2b{background:linear-gradient(to bottom,var(--surface) 0%,var(--surface) 20%,var(--bg) 80%,var(--bg) 100%)}
-.ornament--b2s{background:linear-gradient(to bottom,var(--bg) 0%,var(--bg) 20%,var(--surface) 80%,var(--surface) 100%)}
+.ornament--blush{background:var(--blush-section)}
+.ornament--s2b{background:linear-gradient(to bottom,var(--surface),var(--bg))}
+.ornament--b2s{background:linear-gradient(to bottom,var(--bg),var(--surface))}
+
+/* Watercolor botanical section frames */
+.wc-frame{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.wc-frame svg{position:absolute}
+.sec-inner{position:relative;z-index:1}
 
 /* ── HERO ── */
 #hero{position:relative;height:100vh;height:100dvh;min-height:600px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:64px;}
 .hero-bg{position:absolute;inset:0;background:url('portada.jpg') center/cover no-repeat;background-color:var(--surface);}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(245,242,232,0) 15%,rgba(245,242,232,.42) 55%,var(--bg) 100%);}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(239,191,179,.05) 0%,rgba(245,242,232,.3) 45%,rgba(247,243,236,.92) 100%);}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px}
 .hero-bride{font-family:'Great Vibes',cursive;font-size:clamp(68px,21vw,90px);color:var(--dark);line-height:1;display:block;}
-.hero-amp{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:40px;color:var(--accent);display:block;margin:.08em 0;}
+.hero-amp{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:40px;color:var(--blush);display:block;margin:.08em 0;}
 .hero-groom{font-family:'Great Vibes',cursive;font-size:clamp(68px,21vw,90px);color:var(--dark);line-height:1;display:block;}
-.hero-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;letter-spacing:8px;color:var(--dark);margin-top:18px;display:block;opacity:.85;}
 
 /* ── FECHA ── */
 #fecha{padding:48px 28px;background:var(--bg);text-align:center}
 .fecha-block{display:inline-flex;flex-direction:column;align-items:center;gap:10px}
-.fecha-vline{width:1px;height:24px;background:linear-gradient(to bottom,transparent,var(--accent),transparent)}
+.fecha-vline{width:1px;height:24px;background:linear-gradient(to bottom,transparent,var(--blush),transparent)}
 .fecha-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:var(--accent)}
 .fecha-row{display:flex;align-items:center;gap:14px}
-.fecha-rule{display:block;width:38px;height:1px;flex-shrink:0}
-.fecha-rule--l{background:linear-gradient(to right,transparent,var(--accent))}
-.fecha-rule--r{background:linear-gradient(to left,transparent,var(--accent))}
+.fecha-flourish{width:48px;height:22px;flex-shrink:0}
 .fecha-main{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:4px;text-transform:uppercase;color:var(--dark);white-space:nowrap}
 
-/* ── COUNTDOWN ── */
-#countdown{padding:64px 28px;text-align:center;background:linear-gradient(to bottom,var(--bg) 0%,var(--surface) 14%,var(--surface) 100%)}
-.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:360px;margin:32px auto 0;}
-.cd-box{background:var(--card);border-radius:14px;padding:20px 6px 16px;box-shadow:0 4px 20px rgba(68,86,47,.1);}
-.cd-num{font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--dark);line-height:1;font-weight:600;}
-.cd-lbl{font-family:'Lato',sans-serif;font-weight:300;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-top:6px;}
+/* ── COUNTDOWN (Paulina-Leo style) ── */
+#countdown{padding:min(13vh,110px) 28px;text-align:center;background:var(--blush-section)}
+.countdown-sub{font-family:'Great Vibes',cursive;color:var(--blush);font-size:30px;margin-bottom:48px;line-height:1;display:block}
+.countdown-grid{display:flex;justify-content:center;gap:clamp(10px,2.5vw,28px);flex-wrap:wrap;font-variant-numeric:tabular-nums;perspective:1200px}
+.cd-block{min-width:88px;padding:24px 16px;background:var(--card);border:1px solid rgba(239,191,179,.5);box-shadow:0 2px 4px rgba(68,86,47,.05),0 10px 28px -12px rgba(239,191,179,.3);position:relative;overflow:hidden;border-radius:6px}
+.cd-block::before{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(239,191,179,.4)}
+.cd-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(44px,6.5vw,68px);color:var(--dark);line-height:1;display:block;transform-origin:center}
+.cd-lbl{font-family:'Lato',sans-serif;font-size:10px;letter-spacing:.45em;text-transform:uppercase;color:var(--blush);margin-top:12px;padding-left:.45em;font-weight:400}
 
 /* ── QUOTE ── */
 #quote{padding:72px 36px;text-align:center;background:var(--bg)}
 .quote-txt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;line-height:1.75;color:var(--dark);max-width:340px;margin:0 auto;}
-.quote-sig{font-family:'Great Vibes',cursive;font-size:38px;color:var(--accent);margin-top:22px;display:block;}
+.quote-sig{font-family:'Great Vibes',cursive;font-size:38px;color:var(--blush);margin-top:22px;display:block;}
 
 /* ── UBICACIÓN ── */
-#ubicacion{padding:64px 28px;text-align:center;background:linear-gradient(to bottom,var(--surface) 0%,var(--surface) 86%,var(--bg) 100%)}
-.loc-card{background:var(--card);border-radius:20px;padding:36px 28px;margin-top:28px;box-shadow:0 4px 24px rgba(68,86,47,.1);}
+#ubicacion{padding:64px 28px;text-align:center;background:var(--surface)}
+.loc-card{background:var(--card);border-radius:20px;padding:36px 28px;margin-top:28px;box-shadow:0 4px 24px rgba(239,191,179,.2);}
 .loc-name{font-family:'Great Vibes',cursive;font-size:48px;color:var(--dark);}
 .loc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-top:6px;}
 .loc-hours{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--text);margin-top:14px;line-height:1.8;}
 .loc-address{font-family:'Lato',sans-serif;font-weight:300;font-size:12px;letter-spacing:.5px;color:var(--text);opacity:.6;margin-top:8px;line-height:1.5;}
 .loc-city{font-family:'Lato',sans-serif;font-weight:300;font-size:13px;letter-spacing:2px;color:var(--accent);margin-top:10px;text-transform:uppercase;}
-.btn-map{display:inline-flex;align-items:center;gap:8px;margin-top:24px;background:var(--dark);color:#fff;text-decoration:none;font-family:'Lato',sans-serif;font-weight:300;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:13px 28px;border-radius:40px;transition:background .3s;}
-.btn-map:hover{background:var(--accent)}
-.btn-map svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
-.loc-cal-divider{width:40px;height:1px;background:linear-gradient(to right,transparent,var(--accent),transparent);margin:28px auto 20px;}
+.loc-map-embed{width:100%;height:240px;border-radius:16px;overflow:hidden;margin-top:24px;border:1px solid rgba(239,191,179,.4);}
+.loc-map-embed iframe{width:100%;height:100%;border:0;display:block;}
+.loc-cal-divider{width:40px;height:1px;background:linear-gradient(to right,transparent,var(--blush),transparent);margin:28px auto 20px;}
 .loc-cal-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
-.btn-cal{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid var(--accent);color:var(--dark);text-decoration:none;font-family:'Lato',sans-serif;font-weight:300;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:12px 24px;border-radius:40px;transition:all .3s;cursor:pointer;}
-.btn-cal:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn-cal{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid var(--blush);color:var(--dark);text-decoration:none;font-family:'Lato',sans-serif;font-weight:300;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:12px 24px;border-radius:40px;transition:all .3s;cursor:pointer;}
+.btn-cal:hover{background:var(--blush);color:#fff;border-color:var(--blush)}
 .btn-cal svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
 
-/* ── ITINERARIO ── */
-#itinerario{padding:72px 16px;background:var(--bg);text-align:center}
-.itin-grid{display:grid;grid-template-columns:1fr 28px 1fr;max-width:380px;margin:40px auto 0;position:relative;}
-.itin-spine{position:absolute;left:calc(50% - .5px);top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,transparent,var(--accent) 8%,var(--accent) 92%,transparent);transform-origin:top center;transform:scaleY(0);}
-.itin-item{padding:0 14px 32px;text-align:right;}
-.itin-item--r{text-align:left}
-.itin-dot-col{display:flex;flex-direction:column;align-items:center;padding-bottom:32px;}
-.itin-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);box-shadow:0 0 0 2px var(--accent);flex-shrink:0;margin-top:3px;}
-.itin-time{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:2px;color:var(--accent);margin-bottom:4px;}
-.itin-evt{font-family:'Lato',sans-serif;font-weight:300;font-size:14px;color:var(--text);line-height:1.4;}
+/* ── ITINERARIO BOTÁNICO ── */
+#itinerario{padding:72px 20px;background:var(--bg);text-align:center;position:relative;overflow:hidden}
+.itin-vine{position:absolute;left:50%;top:140px;bottom:60px;width:1px;transform:translateX(-50%);background:linear-gradient(to bottom,transparent,rgba(131,147,77,.25) 8%,rgba(131,147,77,.25) 92%,transparent);pointer-events:none}
+.itin-vine::before{content:'';position:absolute;top:0;left:-4px;right:-4px;bottom:0;background:linear-gradient(to bottom,transparent,rgba(239,191,179,.15) 8%,rgba(239,191,179,.15) 92%,transparent);filter:blur(3px)}
+.itin-list{list-style:none;margin-top:48px;display:flex;flex-direction:column;gap:0}
+.itin-event{display:grid;grid-template-columns:1fr 48px 1fr;align-items:start;position:relative;padding:16px 0}
+.itin-card{background:var(--card);border-radius:16px;padding:18px 16px;box-shadow:0 2px 8px rgba(239,191,179,.2),0 8px 28px -8px rgba(68,86,47,.1);position:relative;text-align:left;border:1px solid rgba(239,191,179,.35)}
+.itin-card-corner{position:absolute;top:8px;right:8px;opacity:.35}
+.itin-card-corner svg{width:24px;height:24px}
+.itin-time{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:3px;color:var(--blush);margin-bottom:4px}
+.itin-evt{font-family:'Lato',sans-serif;font-weight:400;font-size:13px;color:var(--dark);line-height:1.4}
+.itin-desc{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--text);opacity:.7;margin-top:3px;line-height:1.45}
+.itin-center{display:flex;flex-direction:column;align-items:center;padding-top:14px;position:relative;z-index:2}
+.itin-leaf{width:26px;height:26px;background:var(--card);border:1.5px solid var(--blush);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px rgba(239,191,179,.15)}
+.itin-leaf svg{width:13px;height:13px}
+.itin-spacer{flex:1}
+/* Right-side cards just flip grid alignment */
+.itin-event--r .itin-card{text-align:right}
+.itin-event--r .itin-card-corner{right:auto;left:8px}
 
 /* ── DRESS CODE ── */
-#dresscode{padding:72px 28px;text-align:center;background:linear-gradient(to bottom,var(--bg) 0%,var(--surface) 14%,var(--surface) 86%,var(--bg) 100%)}
+#dresscode{padding:72px 28px;text-align:center;background:var(--blush-section)}
 .dc-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--dark);margin-bottom:6px;}
 .dc-note{font-family:'Lato',sans-serif;font-weight:300;font-size:13px;color:var(--accent);letter-spacing:.5px;margin-bottom:24px;}
 .dc-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px;}
-.dc-col{background:var(--card);border-radius:16px;padding:22px 16px;box-shadow:0 4px 16px rgba(68,86,47,.08);text-align:left;}
+.dc-col{background:var(--card);border-radius:16px;padding:22px 16px;box-shadow:0 4px 16px rgba(239,191,179,.15);text-align:left;border:1px solid rgba(239,191,179,.3)}
 .dc-col-ttl{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--dark);margin-bottom:12px;text-align:center;}
 .dc-list{list-style:none}
 .dc-list li{font-family:'Lato',sans-serif;font-weight:300;font-size:12px;color:var(--text);padding:3px 0 3px 14px;position:relative;line-height:1.4;}
-.dc-list li::before{content:'·';position:absolute;left:4px;color:var(--accent)}
+.dc-list li::before{content:'·';position:absolute;left:4px;color:var(--blush)}
 .dc-swatches{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:20px;}
 .dc-sw{display:flex;flex-direction:column;align-items:center;gap:5px}
 .dc-sw-c{width:34px;height:34px;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.12);}
 .dc-sw-n{font-family:'Lato',sans-serif;font-weight:300;font-size:9px;letter-spacing:.5px;color:var(--text);text-align:center;max-width:50px;line-height:1.3;}
 .dc-avoid{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:#c0625a;text-align:center;}
+.no-kids{display:flex;align-items:center;gap:12px;background:rgba(239,191,179,.15);border:1px solid rgba(239,191,179,.4);border-radius:14px;padding:14px 18px;margin-top:24px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--dark);text-align:left;line-height:1.5;}
+.no-kids svg{width:22px;height:22px;flex-shrink:0;stroke:var(--blush);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;}
 
-/* ── GALERÍA ── */
-#galeria{padding:72px 28px;background:var(--bg);text-align:center}
-.gal-wrap{position:relative;margin-top:32px}
-.gal-carousel{position:relative;overflow:hidden;border-radius:28px;aspect-ratio:4/5;box-shadow:0 16px 56px rgba(68,86,47,.24);cursor:grab;user-select:none;}
-.gal-carousel:active{cursor:grabbing}
-.gal-slide{position:absolute;inset:0;opacity:0;transition:opacity .85s cubic-bezier(.4,0,.2,1);pointer-events:none;}
-.gal-slide.active{opacity:1;pointer-events:auto}
-.gal-slide img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;pointer-events:none;}
-.gal-vignette{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,53,32,.3) 0%,transparent 55%);pointer-events:none;}
-.gal-btn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:rgba(253,250,243,.75);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);z-index:10;transition:background .2s,transform .2s;-webkit-backdrop-filter:blur(6px);}
-.gal-btn:hover{background:rgba(253,250,243,.96);transform:translateY(-50%) scale(1.08)}
-.gal-btn svg{width:18px;height:18px;stroke:var(--dark);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.gal-prev{left:14px}.gal-next{right:14px}
-.gal-dots{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:20px;}
-.gal-dot{width:7px;height:7px;border-radius:4px;background:var(--accent);opacity:.28;transition:all .4s cubic-bezier(.4,0,.2,1);cursor:pointer;border:none;padding:0;}
-.gal-dot.active{opacity:1;width:22px}
+/* ── GALERÍA — RUEDA DE LA FORTUNA ── */
+#galeria{padding:min(14vh,130px) 0 min(18vh,160px);background:var(--surface)}
+.gallery-head{text-align:center;margin-bottom:56px;padding:0 28px}
+.gallery-sub{font-family:'Great Vibes',cursive;color:var(--blush);font-size:30px;line-height:1;display:block;margin-top:6px}
+.wheel-stage{position:relative;width:100%;height:min(860px,106vw);max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:center;overflow:visible}
+.wheel-stage::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(239,191,179,.1) 0%,transparent 55%);pointer-events:none}
+.wheel{position:relative;width:min(660px,86vw);height:min(660px,86vw);transform-style:preserve-3d;will-change:transform}
+.wheel-spoke{position:absolute;inset:0;pointer-events:none;border:1px dashed rgba(239,191,179,.4);border-radius:50%;opacity:.5}
+.wheel-spoke--inner{inset:36%;border:1px solid rgba(131,147,77,.35);opacity:.55}
+.wheel-hub{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:clamp(95px,12vw,132px);height:clamp(95px,12vw,132px);border-radius:50%;background:radial-gradient(circle,var(--card) 0%,var(--card) 55%,transparent 80%);border:1px solid rgba(239,191,179,.6);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 2px 10px rgba(239,191,179,.3),0 6px 20px -6px rgba(68,86,47,.18);z-index:3}
+.wheel-hub svg{width:62%;height:auto;color:var(--blush)}
+.wheel-item{position:absolute;top:50%;left:50%;width:clamp(118px,18vw,178px);height:clamp(158px,24.5vw,238px);margin-left:calc(clamp(118px,18vw,178px)/-2);margin-top:calc(clamp(158px,24.5vw,238px)/-2);--angle:calc(90deg * var(--i));transform:rotate(var(--angle)) translateY(calc(-1 * min(240px,30vw)));transform-origin:center center}
+.wheel-item-inner{width:100%;height:100%;transform:rotate(calc(-1 * var(--angle)));transform-origin:center center;position:relative;overflow:hidden;border:1px solid rgba(239,191,179,.5);background:var(--card);box-shadow:0 2px 4px rgba(68,86,47,.07),0 8px 20px -6px rgba(68,86,47,.18),0 24px 60px -28px rgba(68,86,47,.3);transition:box-shadow .5s;cursor:zoom-in}
+.wheel-item-inner::after{content:"";position:absolute;inset:6px;border:1px solid rgba(253,246,242,.35);pointer-events:none;z-index:2}
+.wheel-item-inner img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95) contrast(1.03)}
+.wheel-item:hover .wheel-item-inner{box-shadow:0 2px 4px rgba(68,86,47,.1),0 10px 26px -6px rgba(239,191,179,.5),0 28px 70px -24px rgba(68,86,47,.4)}
+@media(max-width:480px){.wheel-item{transform:rotate(var(--angle)) translateY(calc(-1 * min(210px,30vw)))}}
 
-/* ── RSVP ── */
-#rsvp{padding:72px 28px;background:var(--bg);text-align:center}
-.rsvp-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;letter-spacing:1px;color:var(--accent);margin-bottom:28px;}
-.rsvp-card{background:var(--card);border-radius:20px;padding:32px 24px;box-shadow:0 4px 24px rgba(68,86,47,.1);text-align:left;}
-.rsvp-field{margin-bottom:18px}
-.rsvp-field label{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
-.rsvp-field input,.rsvp-field select,.rsvp-field textarea{width:100%;background:var(--bg);border:1.5px solid rgba(131,147,77,.3);border-radius:10px;padding:12px 14px;font-family:'Lato',sans-serif;font-weight:300;font-size:16px;color:var(--text);outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none;}
-.rsvp-field input:focus,.rsvp-field select:focus,.rsvp-field textarea:focus{border-color:var(--accent)}
-.rsvp-field textarea{resize:vertical;min-height:88px}
-.rsvp-pases-display{display:flex;align-items:center;background:var(--bg);border:1.5px solid rgba(131,147,77,.3);border-radius:10px;padding:12px 14px;font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:2px;color:var(--dark);font-weight:600;min-height:48px;}
-.btn-wa{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:6px;background:var(--dark);color:#fff;border:none;cursor:pointer;font-family:'Lato',sans-serif;font-weight:300;font-size:13px;letter-spacing:3px;text-transform:uppercase;padding:16px 24px;border-radius:50px;transition:background .3s,box-shadow .3s;box-shadow:0 4px 18px rgba(68,86,47,.3);}
-.btn-wa:hover{background:var(--accent);box-shadow:0 6px 24px rgba(131,147,77,.4)}
-.btn-wa svg{width:20px;height:20px;fill:currentColor;flex-shrink:0;opacity:.85}
-
-/* ── SIN NIÑOS ── */
-.no-kids{display:flex;align-items:center;gap:12px;background:rgba(131,147,77,.07);border:1px solid rgba(131,147,77,.22);border-radius:14px;padding:14px 18px;margin-top:24px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--dark);text-align:left;line-height:1.5;}
-.no-kids svg{width:22px;height:22px;flex-shrink:0;stroke:var(--accent);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+/* ── LIGHTBOX ── */
+#lightbox{position:fixed;inset:0;z-index:9990;display:none;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px);background:rgba(10,18,6,.88);backdrop-filter:blur(18px) saturate(1.15);-webkit-backdrop-filter:blur(18px) saturate(1.15);opacity:0;cursor:zoom-out}
+#lightbox.is-open{display:flex}
+#lightbox-img{max-width:min(94vw,1400px);max-height:min(86vh,1000px);width:auto;height:auto;object-fit:contain;border-radius:14px;box-shadow:0 28px 90px rgba(0,0,0,.6),0 0 0 1px rgba(239,191,179,.25);opacity:0;transform:scale(.88)}
+#lightbox-close{position:absolute;top:clamp(16px,3vw,32px);right:clamp(16px,3vw,32px);width:48px;height:48px;border:1px solid rgba(239,191,179,.5);background:rgba(10,18,6,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:50%;color:#FDF5F3;font-size:26px;line-height:1;font-family:'Lato',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s,border-color .3s,transform .3s}
+#lightbox-close:hover{background:rgba(68,86,47,.8);border-color:var(--blush);transform:scale(1.08)}
 
 /* ── REGALOS ── */
 #regalos{padding:72px 28px;background:var(--bg);text-align:center}
-.gift-card{background:var(--card);border-radius:20px;padding:32px 28px;margin-top:28px;box-shadow:0 4px 24px rgba(68,86,47,.1);}
+.gift-card{background:var(--card);border-radius:20px;padding:32px 28px;margin-top:28px;box-shadow:0 4px 24px rgba(239,191,179,.18);border:1px solid rgba(239,191,179,.25)}
 .gift-msg{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;line-height:1.85;color:var(--text);margin-bottom:24px;}
-.gift-divider{width:40px;height:1px;background:linear-gradient(to right,transparent,var(--accent),transparent);margin:0 auto 22px;}
+.gift-divider{width:40px;height:1px;background:linear-gradient(to right,transparent,var(--blush),transparent);margin:0 auto 22px;}
 .gift-bank-name{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:5px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
 .gift-account{font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:4px;color:var(--dark);font-weight:600;}
 .gift-titular{font-family:'Lato',sans-serif;font-weight:300;font-size:13px;letter-spacing:.5px;color:var(--text);margin-top:6px;opacity:.75;}
-.btn-copy{display:inline-flex;align-items:center;gap:7px;margin-top:14px;background:transparent;border:1.5px solid var(--accent);color:var(--dark);font-family:'Lato',sans-serif;font-weight:300;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:9px 20px;border-radius:40px;cursor:pointer;transition:all .3s;}
-.btn-copy:hover{background:var(--accent);color:#fff}
+.btn-copy{display:inline-flex;align-items:center;gap:7px;margin-top:14px;background:transparent;border:1.5px solid var(--blush);color:var(--dark);font-family:'Lato',sans-serif;font-weight:300;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:9px 20px;border-radius:40px;cursor:pointer;transition:all .3s;}
+.btn-copy:hover{background:var(--blush);color:#fff}
 .btn-copy svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .gift-stores{display:flex;flex-direction:column;gap:12px;margin-top:4px}
 .btn-store{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:15px 24px;border-radius:50px;text-decoration:none;font-family:'Lato',sans-serif;font-weight:400;font-size:14px;letter-spacing:2px;text-transform:uppercase;transition:opacity .25s;}
-.btn-amazon{background:var(--surface);color:var(--dark);border:1.5px solid rgba(68,86,47,.25)}
+.btn-amazon{background:var(--surface);color:var(--dark);border:1.5px solid rgba(239,191,179,.4)}
 .btn-liverpool{background:var(--dark);color:#fff}
 .btn-store svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
-.btn-pending{opacity:.45;cursor:default;pointer-events:none;border:1.5px dashed rgba(68,86,47,.2)!important;background:var(--surface)!important;color:var(--dark)!important;}
-.por-confirmar-tag{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;letter-spacing:2px;color:var(--accent);opacity:.65;text-align:center;margin-top:-4px;}
+.btn-pending{opacity:.45;cursor:default;pointer-events:none;border:1.5px dashed rgba(239,191,179,.35)!important;background:var(--surface)!important;color:var(--dark)!important;}
+.por-confirmar-tag{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;letter-spacing:2px;color:var(--blush);opacity:.75;text-align:center;margin-top:-4px;}
 
 /* ── ÁLBUM ── */
-#album{padding:72px 28px;text-align:center;background:linear-gradient(to bottom,var(--bg) 0%,var(--surface) 14%,var(--surface) 86%,var(--bg) 100%)}
+#album{padding:72px 28px;text-align:center;background:var(--blush-section)}
 .album-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;line-height:1.75;color:var(--dark);max-width:320px;margin:16px auto 32px;}
-.album-qr-wrap{display:inline-flex;flex-direction:column;align-items:center;gap:14px;background:var(--card);border-radius:24px;padding:28px;box-shadow:0 4px 24px rgba(68,86,47,.12);}
-.album-pending-box{width:180px;height:180px;border-radius:12px;background:var(--surface);border:1.5px dashed rgba(131,147,77,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;}
-.album-pending-box svg{width:36px;height:36px;stroke:var(--accent);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.6;}
-.album-pending-box span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:2px;color:var(--accent);opacity:.8;}
+.album-qr-wrap{display:inline-flex;flex-direction:column;align-items:center;gap:14px;background:var(--card);border-radius:24px;padding:28px;box-shadow:0 4px 24px rgba(239,191,179,.2);border:1px solid rgba(239,191,179,.3)}
+.album-pending-box{width:180px;height:180px;border-radius:12px;background:var(--surface);border:1.5px dashed rgba(239,191,179,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;}
+.album-pending-box svg{width:36px;height:36px;stroke:var(--blush);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.7;}
+.album-pending-box span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:2px;color:var(--blush);opacity:.9;}
 .qr-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);}
+
+/* ── RSVP ── */
+#rsvp{padding:72px 28px;background:var(--surface);text-align:center}
+.rsvp-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;letter-spacing:1px;color:var(--blush);margin-bottom:28px;}
+.rsvp-card{background:var(--card);border-radius:20px;padding:32px 24px;box-shadow:0 4px 24px rgba(239,191,179,.18);text-align:left;border:1px solid rgba(239,191,179,.3)}
+.rsvp-field{margin-bottom:18px}
+.rsvp-field label{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.rsvp-field input,.rsvp-field select,.rsvp-field textarea{width:100%;background:var(--bg);border:1.5px solid rgba(239,191,179,.4);border-radius:10px;padding:12px 14px;font-family:'Lato',sans-serif;font-weight:300;font-size:16px;color:var(--text);outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none;}
+.rsvp-field input:focus,.rsvp-field select:focus,.rsvp-field textarea:focus{border-color:var(--blush)}
+.rsvp-field textarea{resize:vertical;min-height:88px}
+.rsvp-pases-display{display:flex;align-items:center;background:var(--bg);border:1.5px solid rgba(239,191,179,.4);border-radius:10px;padding:12px 14px;font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:2px;color:var(--dark);font-weight:600;min-height:48px;}
+/* Botón WhatsApp estilo Jardines Botánicos */
+.btn-wa-bot{
+  display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:8px;
+  background:linear-gradient(135deg,var(--dark) 0%,#5a7438 50%,var(--dark) 100%);
+  color:#fff;border:none;cursor:pointer;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;letter-spacing:2px;
+  padding:17px 24px;border-radius:50px;
+  transition:box-shadow .35s,transform .25s;
+  box-shadow:0 4px 18px rgba(68,86,47,.28),inset 0 1px 0 rgba(255,255,255,.1);
+  position:relative;overflow:hidden;
+}
+.btn-wa-bot::before{
+  content:'';position:absolute;inset:0;border-radius:50px;
+  background:linear-gradient(135deg,rgba(239,191,179,.12) 0%,transparent 60%);
+  pointer-events:none;
+}
+.btn-wa-bot::after{
+  content:'';position:absolute;inset:2px;border-radius:48px;
+  border:1px solid rgba(239,191,179,.2);pointer-events:none;
+}
+.btn-wa-bot:hover{box-shadow:0 8px 28px rgba(68,86,47,.35),0 2px 6px rgba(239,191,179,.2);transform:translateY(-1px)}
+.btn-wa-bot:active{transform:translateY(0)}
+.btn-wa-bot span{font-size:15px;letter-spacing:3px;text-transform:uppercase;font-style:normal;font-family:'Lato',sans-serif;font-weight:300}
 
 /* ── FOOTER ── */
 #footer{padding:64px 28px;text-align:center;background:var(--bg)}
 .footer-names{font-family:'Great Vibes',cursive;font-size:50px;color:var(--dark);}
-.footer-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;letter-spacing:6px;color:var(--accent);margin-top:10px;}
-.footer-hr{width:60px;height:1px;background:var(--accent);margin:24px auto 16px;opacity:.4;}
-.footer-credit{font-family:'Lato',sans-serif;font-weight:300;font-size:11px;letter-spacing:2px;color:var(--accent);opacity:.45;text-decoration:none;display:block;transition:opacity .3s;}
-.footer-credit:hover{opacity:.75}
+.footer-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;letter-spacing:6px;color:var(--blush);margin-top:10px;}
+.footer-hr{width:60px;height:1px;background:var(--blush);margin:24px auto 16px;opacity:.45;}
+.footer-credit{font-family:'Lato',sans-serif;font-weight:300;font-size:11px;letter-spacing:2px;color:var(--blush);opacity:.5;text-decoration:none;display:block;transition:opacity .3s;}
+.footer-credit:hover{opacity:.85}
 
 /* ── MUSIC FAB ── */
-.music-fab{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:var(--accent);border:none;cursor:pointer;z-index:998;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(68,86,47,.35);color:#fff;}
-.music-fab::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--accent);animation:fabpulse 2.2s ease-out infinite;z-index:-1;}
+.music-fab{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:var(--blush);border:none;cursor:pointer;z-index:998;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(239,191,179,.45);color:#fff;}
+.music-fab::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--blush);animation:fabpulse 2.2s ease-out infinite;z-index:-1;}
 @keyframes fabpulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.9);opacity:0}}
 .music-fab svg{width:22px;height:22px;fill:currentColor}
 .music-fab.playing .ic-play{display:none}
@@ -282,7 +295,7 @@ body{
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════ LOADER -->
+<!-- LOADER -->
 <div id="loader">
   <div class="ld-mono" id="ldMono">
     <span>N</span><span>&nbsp;</span><span>&amp;</span><span>&nbsp;</span><span>L</span>
@@ -290,23 +303,42 @@ body{
   <p class="ld-tag" id="ldTag">Nos casamos &middot; 07 Agosto 2026</p>
 </div>
 
-<!-- ═══════════════════════════════════════════ PARTÍCULAS BOTÁNICAS -->
+<!-- PARTÍCULAS BOTÁNICAS -->
 <div id="petals"></div>
 
-<!-- ═══════════════════════════════════════════ ENVELOPE OPENING -->
+<!-- ENVELOPE -->
 <div id="envelope-screen">
   <img id="envImage" src="sobre.jpg" alt="Invitación de boda">
   <video id="envVideo" src="apertura.mp4" muted playsinline preload="auto" poster="sobre.jpg"></video>
   <div class="env-tap" id="envTap">Toca para abrir</div>
 </div>
 
-<!-- ═══════════════════════════════════════════ WRAP -->
+<!-- WRAP -->
 <div class="wrap">
 
-  <!-- ── 1. HERO ── -->
+  <!-- HERO -->
   <section id="hero">
     <div class="hero-bg"></div>
     <div class="hero-veil"></div>
+    <!-- Botanical watercolor corner decoration -->
+    <svg style="position:absolute;top:16px;left:12px;width:90px;height:90px;opacity:.55;pointer-events:none;z-index:2" viewBox="0 0 90 90" fill="none">
+      <path d="M10 80 C20 55 35 30 80 10" stroke="#EFBFB3" stroke-width="1" opacity=".6"/>
+      <ellipse cx="22" cy="62" rx="10" ry="4" fill="#EFBFB3" opacity=".5" transform="rotate(-42 22 62)"/>
+      <ellipse cx="38" cy="44" rx="9" ry="3.5" fill="#B8C88D" opacity=".45" transform="rotate(-50 38 44)"/>
+      <ellipse cx="54" cy="28" rx="8" ry="3" fill="#EFBFB3" opacity=".4" transform="rotate(-52 54 28)"/>
+      <circle cx="72" cy="14" r="3" fill="#EFBFB3" opacity=".6"/>
+      <circle cx="75" cy="11" r="1.8" fill="#F5D4CC" opacity=".5"/>
+      <circle cx="69" cy="11" r="1.8" fill="#F5D4CC" opacity=".5"/>
+    </svg>
+    <svg style="position:absolute;top:16px;right:12px;width:90px;height:90px;opacity:.55;pointer-events:none;z-index:2;transform:scaleX(-1)" viewBox="0 0 90 90" fill="none">
+      <path d="M10 80 C20 55 35 30 80 10" stroke="#EFBFB3" stroke-width="1" opacity=".6"/>
+      <ellipse cx="22" cy="62" rx="10" ry="4" fill="#EFBFB3" opacity=".5" transform="rotate(-42 22 62)"/>
+      <ellipse cx="38" cy="44" rx="9" ry="3.5" fill="#B8C88D" opacity=".45" transform="rotate(-50 38 44)"/>
+      <ellipse cx="54" cy="28" rx="8" ry="3" fill="#EFBFB3" opacity=".4" transform="rotate(-52 54 28)"/>
+      <circle cx="72" cy="14" r="3" fill="#EFBFB3" opacity=".6"/>
+      <circle cx="75" cy="11" r="1.8" fill="#F5D4CC" opacity=".5"/>
+      <circle cx="69" cy="11" r="1.8" fill="#F5D4CC" opacity=".5"/>
+    </svg>
     <div class="hero-content">
       <span class="hero-bride rv">Naomi</span>
       <span class="hero-amp rv">&amp;</span>
@@ -320,99 +352,105 @@ body{
     </div>
   </section>
 
-  <!-- ── ORNAMENTO BOTÁNICO A (ramas con hojas) ── -->
-  <div class="ornament rv">
-    <svg viewBox="0 0 360 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Tallos principales -->
-      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".45"/>
-      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".45"/>
-      <!-- Tallos secundarios izquierda -->
-      <path d="M138 38 C130 27 122 20 116 12" stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <path d="M108 24 C100 18 94 12 90 6"   stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <!-- Hojas izquierda (pares elípticos a lo largo del tallo) -->
-      <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#B8C88D" opacity=".55" transform="rotate(-32 152 33)"/>
-      <ellipse cx="152" cy="33" rx="11" ry="4"   fill="#83934D" opacity=".3"  transform="rotate(18 152 33)"/>
-      <ellipse cx="124" cy="22" rx="11" ry="4.5" fill="#B8C88D" opacity=".5"  transform="rotate(-45 124 22)"/>
-      <ellipse cx="96"  cy="13" rx="9"  ry="3.5" fill="#B8C88D" opacity=".45" transform="rotate(-55 96 13)"/>
-      <ellipse cx="72"  cy="18" rx="8"  ry="3"   fill="#83934D" opacity=".35" transform="rotate(-22 72 18)"/>
-      <!-- Hojas derecha (espejo) -->
-      <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#B8C88D" opacity=".55" transform="rotate(32 208 33)"/>
-      <ellipse cx="208" cy="33" rx="11" ry="4"   fill="#83934D" opacity=".3"  transform="rotate(-18 208 33)"/>
-      <ellipse cx="236" cy="22" rx="11" ry="4.5" fill="#B8C88D" opacity=".5"  transform="rotate(45 236 22)"/>
-      <ellipse cx="264" cy="13" rx="9"  ry="3.5" fill="#B8C88D" opacity=".45" transform="rotate(55 264 13)"/>
-      <ellipse cx="288" cy="18" rx="8"  ry="3"   fill="#83934D" opacity=".35" transform="rotate(22 288 18)"/>
-      <!-- Tallos secundarios derecha -->
-      <path d="M222 38 C230 27 238 20 244 12" stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <path d="M252 24 C260 18 266 12 270 6"  stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <!-- Flores/frutos en puntas (blush) -->
-      <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".75"/>
-      <circle cx="113" cy="9"  r="1.8" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="118" cy="8"  r="1.8" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="90"  cy="6"  r="2.8" fill="#EFBFB3" opacity=".68"/>
-      <circle cx="87"  cy="3"  r="1.5" fill="#EFBFB3" opacity=".45"/>
-      <circle cx="92"  cy="3"  r="1.5" fill="#EFBFB3" opacity=".45"/>
-      <circle cx="244" cy="12" r="3.2" fill="#EFBFB3" opacity=".75"/>
-      <circle cx="241" cy="9"  r="1.8" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="246" cy="8"  r="1.8" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="270" cy="6"  r="2.8" fill="#EFBFB3" opacity=".68"/>
-      <circle cx="267" cy="3"  r="1.5" fill="#EFBFB3" opacity=".45"/>
-      <circle cx="272" cy="3"  r="1.5" fill="#EFBFB3" opacity=".45"/>
-      <!-- Punto central -->
-      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".5"/>
-      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".4"/>
+  <!-- ORNAMENTO BOTÁNICO -->
+  <div class="ornament">
+    <svg viewBox="0 0 360 68" fill="none" width="340" height="68">
+      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
+      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
+      <path d="M138 38 C130 27 122 20 116 12" stroke="#83934D" stroke-width=".85" opacity=".45"/>
+      <path d="M108 24 C100 18 94 12 90 6" stroke="#83934D" stroke-width=".85" opacity=".45"/>
+      <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".55" transform="rotate(-32 152 33)"/>
+      <ellipse cx="124" cy="22" rx="11" ry="4.5" fill="#B8C88D" opacity=".45" transform="rotate(-45 124 22)"/>
+      <ellipse cx="96" cy="13" rx="9" ry="3.5" fill="#EFBFB3" opacity=".4" transform="rotate(-55 96 13)"/>
+      <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".55" transform="rotate(32 208 33)"/>
+      <ellipse cx="236" cy="22" rx="11" ry="4.5" fill="#B8C88D" opacity=".45" transform="rotate(45 236 22)"/>
+      <ellipse cx="264" cy="13" rx="9" ry="3.5" fill="#EFBFB3" opacity=".4" transform="rotate(55 264 13)"/>
+      <path d="M222 38 C230 27 238 20 244 12" stroke="#83934D" stroke-width=".85" opacity=".45"/>
+      <path d="M252 24 C260 18 266 12 270 6" stroke="#83934D" stroke-width=".85" opacity=".45"/>
+      <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".8"/>
+      <circle cx="113" cy="9" r="1.8" fill="#F5D4CC" opacity=".6"/>
+      <circle cx="118" cy="8" r="1.8" fill="#F5D4CC" opacity=".6"/>
+      <circle cx="90" cy="6" r="2.8" fill="#EFBFB3" opacity=".7"/>
+      <circle cx="244" cy="12" r="3.2" fill="#EFBFB3" opacity=".8"/>
+      <circle cx="241" cy="9" r="1.8" fill="#F5D4CC" opacity=".6"/>
+      <circle cx="246" cy="8" r="1.8" fill="#F5D4CC" opacity=".6"/>
+      <circle cx="270" cy="6" r="2.8" fill="#EFBFB3" opacity=".7"/>
+      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".45"/>
+      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".35"/>
     </svg>
   </div>
 
-  <!-- ── 3. FECHA ── -->
+  <!-- FECHA -->
   <section id="fecha">
     <div class="fecha-block rv">
       <div class="fecha-vline"></div>
       <p class="fecha-label">Viernes</p>
       <div class="fecha-row">
-        <span class="fecha-rule fecha-rule--l"></span>
+        <!-- Flourish izquierdo curvo -->
+        <svg class="fecha-flourish" viewBox="0 0 48 22" fill="none">
+          <path d="M46 11 C36 5 22 3 4 11" stroke="#EFBFB3" stroke-width="1.2" opacity=".7" stroke-linecap="round"/>
+          <path d="M38 7 C32 4 25 4 18 7" stroke="#B8C88D" stroke-width=".8" opacity=".5" stroke-linecap="round"/>
+          <circle cx="4" cy="11" r="2" fill="#EFBFB3" opacity=".7"/>
+          <ellipse cx="24" cy="3.5" rx="4" ry="1.5" fill="#EFBFB3" opacity=".4" transform="rotate(-10 24 3.5)"/>
+        </svg>
         <span class="fecha-main">07 &middot; Agosto &middot; 2026</span>
-        <span class="fecha-rule fecha-rule--r"></span>
+        <!-- Flourish derecho curvo -->
+        <svg class="fecha-flourish" viewBox="0 0 48 22" fill="none" style="transform:scaleX(-1)">
+          <path d="M46 11 C36 5 22 3 4 11" stroke="#EFBFB3" stroke-width="1.2" opacity=".7" stroke-linecap="round"/>
+          <path d="M38 7 C32 4 25 4 18 7" stroke="#B8C88D" stroke-width=".8" opacity=".5" stroke-linecap="round"/>
+          <circle cx="4" cy="11" r="2" fill="#EFBFB3" opacity=".7"/>
+          <ellipse cx="24" cy="3.5" rx="4" ry="1.5" fill="#EFBFB3" opacity=".4" transform="rotate(-10 24 3.5)"/>
+        </svg>
       </div>
       <div class="fecha-vline"></div>
     </div>
   </section>
 
-  <!-- ── 4. CUENTA REGRESIVA ── -->
-  <section id="countdown" class="sec sec--surface">
-    <p class="eyebrow rv">Faltan</p>
-    <h2 class="script-title rv">Cuenta Regresiva</h2>
-    <div class="cd-grid">
-      <div class="cd-box rv"><div class="cd-num" id="cdDias">000</div><div class="cd-lbl">Días</div></div>
-      <div class="cd-box rv"><div class="cd-num" id="cdHoras">00</div><div class="cd-lbl">Horas</div></div>
-      <div class="cd-box rv"><div class="cd-num" id="cdMins">00</div><div class="cd-lbl">Minutos</div></div>
-      <div class="cd-box rv"><div class="cd-num" id="cdSecs">00</div><div class="cd-lbl">Segundos</div></div>
+  <!-- COUNTDOWN -->
+  <section id="countdown" class="sec--blush">
+    <!-- Botanical watercolor frame corners -->
+    <svg style="position:absolute;top:20px;left:16px;width:70px;height:70px;opacity:.45;pointer-events:none" viewBox="0 0 70 70" fill="none">
+      <path d="M5 65 C15 45 30 20 65 5" stroke="#EFBFB3" stroke-width="1.2" opacity=".6"/>
+      <ellipse cx="16" cy="50" rx="9" ry="3.5" fill="#EFBFB3" opacity=".5" transform="rotate(-42 16 50)"/>
+      <ellipse cx="32" cy="30" rx="8" ry="3" fill="#B8C88D" opacity=".4" transform="rotate(-50 32 30)"/>
+      <circle cx="58" cy="9" r="3" fill="#EFBFB3" opacity=".65"/>
+    </svg>
+    <svg style="position:absolute;top:20px;right:16px;width:70px;height:70px;opacity:.45;pointer-events:none;transform:scaleX(-1)" viewBox="0 0 70 70" fill="none">
+      <path d="M5 65 C15 45 30 20 65 5" stroke="#EFBFB3" stroke-width="1.2" opacity=".6"/>
+      <ellipse cx="16" cy="50" rx="9" ry="3.5" fill="#EFBFB3" opacity=".5" transform="rotate(-42 16 50)"/>
+      <ellipse cx="32" cy="30" rx="8" ry="3" fill="#B8C88D" opacity=".4" transform="rotate(-50 32 30)"/>
+      <circle cx="58" cy="9" r="3" fill="#EFBFB3" opacity=".65"/>
+    </svg>
+    <p class="eyebrow rv">Cuenta regresiva</p>
+    <h2 class="script-title rv">Contamos los días</h2>
+    <span class="countdown-sub rv">hasta el gran momento</span>
+    <div class="countdown-grid" id="cd">
+      <div class="cd-block"><div class="cd-num" id="cd-d">000</div><div class="cd-lbl">Días</div></div>
+      <div class="cd-block"><div class="cd-num" id="cd-h">00</div><div class="cd-lbl">Horas</div></div>
+      <div class="cd-block"><div class="cd-num" id="cd-m">00</div><div class="cd-lbl">Minutos</div></div>
+      <div class="cd-block"><div class="cd-num" id="cd-s">00</div><div class="cd-lbl">Segundos</div></div>
     </div>
   </section>
 
-  <!-- ── ORNAMENTO BOTÁNICO B (horizontal con hojas) ── -->
-  <div class="ornament ornament--s2b rv">
-    <svg viewBox="0 0 260 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Tallos horizontales -->
-      <path d="M20 18 Q66 15 112 18" stroke="#83934D" stroke-width=".9" opacity=".4"/>
-      <path d="M148 18 Q194 15 240 18" stroke="#83934D" stroke-width=".9" opacity=".4"/>
-      <!-- Mini hojas izquierda -->
-      <ellipse cx="58" cy="13" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(-18 58 13)"/>
-      <ellipse cx="85" cy="22" rx="7" ry="3"   fill="#83934D" opacity=".35" transform="rotate(12 85 22)"/>
-      <!-- Centro botánico (diamante + hoja) -->
-      <rect x="125" y="11" width="10" height="10" rx="1.5" transform="rotate(45 130 16)" fill="#83934D" opacity=".45"/>
-      <ellipse cx="130" cy="6"  rx="4" ry="2" fill="#B8C88D" opacity=".5"/>
-      <ellipse cx="130" cy="26" rx="4" ry="2" fill="#B8C88D" opacity=".5"/>
-      <!-- Mini hojas derecha -->
-      <ellipse cx="202" cy="13" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(18 202 13)"/>
-      <ellipse cx="175" cy="22" rx="7" ry="3"   fill="#83934D" opacity=".35" transform="rotate(-12 175 22)"/>
-      <!-- Puntos terminales -->
-      <circle cx="20" cy="18" r="2.2" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="240" cy="18" r="2.2" fill="#EFBFB3" opacity=".55"/>
+  <!-- ORNAMENTO -->
+  <div class="ornament ornament--s2b">
+    <svg viewBox="0 0 260 36" fill="none" width="260" height="36">
+      <path d="M20 18 Q66 14 112 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <path d="M148 18 Q194 14 240 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <ellipse cx="58" cy="12" rx="9" ry="3.5" fill="#EFBFB3" opacity=".55" transform="rotate(-18 58 12)"/>
+      <ellipse cx="85" cy="22" rx="7" ry="3" fill="#B8C88D" opacity=".4" transform="rotate(12 85 22)"/>
+      <rect x="125" y="11" width="10" height="10" rx="1.5" transform="rotate(45 130 16)" fill="#EFBFB3" opacity=".4"/>
+      <ellipse cx="130" cy="6" rx="4" ry="2" fill="#B8C88D" opacity=".45"/>
+      <ellipse cx="130" cy="26" rx="4" ry="2" fill="#B8C88D" opacity=".45"/>
+      <ellipse cx="202" cy="12" rx="9" ry="3.5" fill="#EFBFB3" opacity=".55" transform="rotate(18 202 12)"/>
+      <ellipse cx="175" cy="22" rx="7" ry="3" fill="#B8C88D" opacity=".4" transform="rotate(-12 175 22)"/>
+      <circle cx="20" cy="18" r="2.2" fill="#EFBFB3" opacity=".6"/>
+      <circle cx="240" cy="18" r="2.2" fill="#EFBFB3" opacity=".6"/>
     </svg>
   </div>
 
-  <!-- ── 6. FRASE ROMÁNTICA ── -->
-  <section id="quote" class="sec sec--surface">
+  <!-- FRASE -->
+  <section id="quote" class="sec sec--bg">
     <p class="quote-txt rv">
       &ldquo;Elegirte cada día, en cada momento,<br>
       es el más hermoso de mis compromisos.&rdquo;
@@ -420,38 +458,31 @@ body{
     <span class="quote-sig rv">Naomi &amp; Leonardo</span>
   </section>
 
-  <!-- ── ORNAMENTO BOTÁNICO A invertido ── -->
-  <div class="ornament ornament--b2s rv">
-    <svg viewBox="0 0 360 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".45"/>
-      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".45"/>
-      <path d="M138 38 C130 27 122 20 116 12" stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <path d="M108 24 C100 18 94 12 90 6"   stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#B8C88D" opacity=".55" transform="rotate(-32 152 33)"/>
-      <ellipse cx="152" cy="33" rx="11" ry="4"   fill="#83934D" opacity=".3"  transform="rotate(18 152 33)"/>
-      <ellipse cx="124" cy="22" rx="11" ry="4.5" fill="#B8C88D" opacity=".5"  transform="rotate(-45 124 22)"/>
-      <ellipse cx="96"  cy="13" rx="9"  ry="3.5" fill="#B8C88D" opacity=".45" transform="rotate(-55 96 13)"/>
-      <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#B8C88D" opacity=".55" transform="rotate(32 208 33)"/>
-      <ellipse cx="208" cy="33" rx="11" ry="4"   fill="#83934D" opacity=".3"  transform="rotate(-18 208 33)"/>
-      <ellipse cx="236" cy="22" rx="11" ry="4.5" fill="#B8C88D" opacity=".5"  transform="rotate(45 236 22)"/>
-      <ellipse cx="264" cy="13" rx="9"  ry="3.5" fill="#B8C88D" opacity=".45" transform="rotate(55 264 13)"/>
-      <path d="M222 38 C230 27 238 20 244 12" stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <path d="M252 24 C260 18 266 12 270 6"  stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".75"/>
-      <circle cx="113" cy="9"  r="1.8" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="118" cy="8"  r="1.8" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="90"  cy="6"  r="2.8" fill="#EFBFB3" opacity=".68"/>
-      <circle cx="244" cy="12" r="3.2" fill="#EFBFB3" opacity=".75"/>
-      <circle cx="241" cy="9"  r="1.8" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="246" cy="8"  r="1.8" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="270" cy="6"  r="2.8" fill="#EFBFB3" opacity=".68"/>
-      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".5"/>
-      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".4"/>
+  <!-- ORNAMENTO -->
+  <div class="ornament ornament--b2s">
+    <svg viewBox="0 0 360 68" fill="none" width="340" height="68">
+      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
+      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
+      <path d="M138 38 C130 27 122 20 116 12" stroke="#83934D" stroke-width=".85" opacity=".4"/>
+      <path d="M222 38 C230 27 238 20 244 12" stroke="#83934D" stroke-width=".85" opacity=".4"/>
+      <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".5" transform="rotate(-32 152 33)"/>
+      <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".5" transform="rotate(32 208 33)"/>
+      <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".78"/>
+      <circle cx="244" cy="12" r="3.2" fill="#EFBFB3" opacity=".78"/>
+      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".4"/>
+      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".35"/>
     </svg>
   </div>
 
-  <!-- ── 8. UBICACIÓN ── -->
-  <section id="ubicacion" class="sec sec--bg">
+  <!-- UBICACIÓN -->
+  <section id="ubicacion" class="sec sec--surface">
+    <!-- watercolor corner top-right -->
+    <svg style="position:absolute;top:18px;right:14px;width:65px;height:65px;opacity:.4;pointer-events:none" viewBox="0 0 65 65" fill="none">
+      <path d="M60 5 C45 20 25 35 5 60" stroke="#EFBFB3" stroke-width="1.2" opacity=".7"/>
+      <ellipse cx="48" cy="17" rx="9" ry="3.5" fill="#EFBFB3" opacity=".55" transform="rotate(42 48 17)"/>
+      <ellipse cx="32" cy="33" rx="8" ry="3" fill="#B8C88D" opacity=".4" transform="rotate(48 32 33)"/>
+      <circle cx="10" cy="57" r="2.8" fill="#EFBFB3" opacity=".65"/>
+    </svg>
     <p class="eyebrow rv">Dónde Celebramos</p>
     <h2 class="script-title rv">Ubicación</h2>
     <div class="loc-card rv">
@@ -460,10 +491,15 @@ body{
       <div class="loc-hours">18:00 hrs &mdash; Ceremonia<br>19:00 hrs &mdash; Recepción</div>
       <div class="loc-address">Av. 661 No. 300, Pueblo de San Juan de Aragón</div>
       <div class="loc-city">Gustavo A. Madero &middot; CDMX</div>
-      <a href="https://maps.app.goo.gl/QJpKwmzDYzyfdos18?g_st=ic" target="_blank" rel="noopener" class="btn-map">
-        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-        Ver en Google Maps
-      </a>
+      <div class="loc-map-embed">
+        <iframe
+          src="https://www.google.com/maps?q=Av+661+300+San+Juan+de+Aragon+Gustavo+Madero+Ciudad+de+Mexico&output=embed&z=16&hl=es"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de la boda">
+        </iframe>
+      </div>
     </div>
     <div class="loc-cal-divider rv"></div>
     <p class="loc-cal-eyebrow rv">Agenda el día especial</p>
@@ -474,73 +510,157 @@ body{
     </a>
   </section>
 
-  <!-- ── ORNAMENTO B ── -->
-  <div class="ornament rv">
-    <svg viewBox="0 0 260 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 18 Q66 15 112 18" stroke="#83934D" stroke-width=".9" opacity=".4"/>
-      <path d="M148 18 Q194 15 240 18" stroke="#83934D" stroke-width=".9" opacity=".4"/>
-      <ellipse cx="58"  cy="13" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(-18 58 13)"/>
-      <ellipse cx="85"  cy="22" rx="7" ry="3"   fill="#83934D" opacity=".35" transform="rotate(12 85 22)"/>
-      <rect x="125" y="11" width="10" height="10" rx="1.5" transform="rotate(45 130 16)" fill="#83934D" opacity=".45"/>
-      <ellipse cx="130" cy="6"  rx="4" ry="2" fill="#B8C88D" opacity=".5"/>
-      <ellipse cx="130" cy="26" rx="4" ry="2" fill="#B8C88D" opacity=".5"/>
-      <ellipse cx="202" cy="13" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(18 202 13)"/>
-      <ellipse cx="175" cy="22" rx="7" ry="3"   fill="#83934D" opacity=".35" transform="rotate(-12 175 22)"/>
-      <circle cx="20" cy="18" r="2.2" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="240" cy="18" r="2.2" fill="#EFBFB3" opacity=".55"/>
+  <!-- ORNAMENTO -->
+  <div class="ornament ornament--s2b">
+    <svg viewBox="0 0 260 36" fill="none" width="260" height="36">
+      <path d="M20 18 Q66 14 112 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <path d="M148 18 Q194 14 240 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <ellipse cx="58" cy="12" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(-18 58 12)"/>
+      <ellipse cx="85" cy="22" rx="7" ry="3" fill="#83934D" opacity=".35" transform="rotate(12 85 22)"/>
+      <rect x="125" y="11" width="10" height="10" rx="1.5" transform="rotate(45 130 16)" fill="#EFBFB3" opacity=".45"/>
+      <ellipse cx="130" cy="6" rx="4" ry="2" fill="#B8C88D" opacity=".45"/>
+      <ellipse cx="130" cy="26" rx="4" ry="2" fill="#B8C88D" opacity=".45"/>
+      <ellipse cx="202" cy="12" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(18 202 12)"/>
+      <ellipse cx="175" cy="22" rx="7" ry="3" fill="#83934D" opacity=".35" transform="rotate(-12 175 22)"/>
+      <circle cx="20" cy="18" r="2.2" fill="#EFBFB3" opacity=".6"/>
+      <circle cx="240" cy="18" r="2.2" fill="#EFBFB3" opacity=".6"/>
     </svg>
   </div>
 
-  <!-- ── 10. ITINERARIO ── -->
+  <!-- ITINERARIO BOTÁNICO -->
   <section id="itinerario" class="sec sec--bg">
+    <!-- Background botanical watercolor splash -->
+    <svg style="position:absolute;top:60px;left:-20px;width:120px;height:180px;opacity:.12;pointer-events:none" viewBox="0 0 120 180" fill="none">
+      <ellipse cx="30" cy="90" rx="28" ry="80" fill="#EFBFB3" transform="rotate(-15 30 90)"/>
+      <ellipse cx="55" cy="60" rx="20" ry="55" fill="#B8C88D" opacity=".7" transform="rotate(10 55 60)"/>
+      <ellipse cx="20" cy="120" rx="15" ry="40" fill="#EFBFB3" opacity=".6" transform="rotate(-25 20 120)"/>
+    </svg>
+    <svg style="position:absolute;top:60px;right:-20px;width:120px;height:180px;opacity:.12;pointer-events:none;transform:scaleX(-1)" viewBox="0 0 120 180" fill="none">
+      <ellipse cx="30" cy="90" rx="28" ry="80" fill="#EFBFB3" transform="rotate(-15 30 90)"/>
+      <ellipse cx="55" cy="60" rx="20" ry="55" fill="#B8C88D" opacity=".7" transform="rotate(10 55 60)"/>
+      <ellipse cx="20" cy="120" rx="15" ry="40" fill="#EFBFB3" opacity=".6" transform="rotate(-25 20 120)"/>
+    </svg>
     <p class="eyebrow rv">Programa del Día</p>
     <h2 class="script-title rv">Itinerario</h2>
-    <div class="itin-grid" id="itinGrid">
-      <div class="itin-spine"></div>
-      <div class="itin-item itin-row-l"><div class="itin-time">18:00</div><div class="itin-evt">Bienvenida y Ceremonia Civil</div></div>
-      <div class="itin-dot-col"><div class="itin-dot"></div></div>
-      <div></div>
-      <div></div>
-      <div class="itin-dot-col"><div class="itin-dot"></div></div>
-      <div class="itin-item itin-item--r itin-row-r"><div class="itin-time">18:45</div><div class="itin-evt">Cóctel de Bienvenida</div></div>
-      <div class="itin-item itin-row-l"><div class="itin-time">19:30</div><div class="itin-evt">Cena y Brindis</div></div>
-      <div class="itin-dot-col"><div class="itin-dot"></div></div>
-      <div></div>
-      <div></div>
-      <div class="itin-dot-col"><div class="itin-dot"></div></div>
-      <div class="itin-item itin-item--r itin-row-r"><div class="itin-time">21:00</div><div class="itin-evt">Vals y Baile</div></div>
-      <div class="itin-item itin-row-l"><div class="itin-time">22:00</div><div class="itin-evt">¡Fiesta!</div></div>
-      <div class="itin-dot-col"><div class="itin-dot"></div></div>
-      <div></div>
+    <!-- Botanical sub-ornament -->
+    <div style="display:flex;justify-content:center;margin:8px 0 20px">
+      <svg viewBox="0 0 120 20" fill="none" width="120" height="20">
+        <path d="M5 10 Q30 5 60 10 Q90 15 115 10" stroke="#EFBFB3" stroke-width="1" opacity=".7" stroke-linecap="round"/>
+        <circle cx="60" cy="10" r="2.5" fill="#EFBFB3" opacity=".7"/>
+        <ellipse cx="40" cy="6" rx="5" ry="2" fill="#B8C88D" opacity=".45" transform="rotate(-10 40 6)"/>
+        <ellipse cx="80" cy="14" rx="5" ry="2" fill="#B8C88D" opacity=".45" transform="rotate(10 80 14)"/>
+      </svg>
     </div>
+    <div class="itin-vine" id="itinVine"></div>
+    <ul class="itin-list" id="itinList">
+      <!-- Evento 1 — izquierda -->
+      <li class="itin-event">
+        <div class="itin-card rv">
+          <div class="itin-card-corner" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="12" rx="5" ry="10" fill="#EFBFB3" opacity=".5" transform="rotate(-30 12 12)"/><ellipse cx="12" cy="12" rx="4" ry="8" fill="#B8C88D" opacity=".35" transform="rotate(20 12 12)"/></svg>
+          </div>
+          <div class="itin-time">18:00 hrs</div>
+          <div class="itin-evt">Bienvenida &amp; Ceremonia</div>
+          <div class="itin-desc">Nos unimos en matrimonio bajo el cielo de San Juan de Aragón.</div>
+        </div>
+        <div class="itin-center">
+          <div class="itin-leaf">
+            <svg viewBox="0 0 13 13" fill="none"><ellipse cx="6.5" cy="6.5" rx="5.5" ry="2.5" fill="#EFBFB3" opacity=".9" transform="rotate(-30 6.5 6.5)"/></svg>
+          </div>
+          <div class="itin-spacer"></div>
+        </div>
+        <div></div>
+      </li>
+      <!-- Evento 2 — derecha -->
+      <li class="itin-event itin-event--r">
+        <div></div>
+        <div class="itin-center">
+          <div class="itin-leaf">
+            <svg viewBox="0 0 13 13" fill="none"><ellipse cx="6.5" cy="6.5" rx="5.5" ry="2.5" fill="#B8C88D" opacity=".9" transform="rotate(30 6.5 6.5)"/></svg>
+          </div>
+          <div class="itin-spacer"></div>
+        </div>
+        <div class="itin-card rv">
+          <div class="itin-card-corner" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="12" rx="5" ry="10" fill="#B8C88D" opacity=".5" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="4" ry="8" fill="#EFBFB3" opacity=".35" transform="rotate(-20 12 12)"/></svg>
+          </div>
+          <div class="itin-time">18:45 hrs</div>
+          <div class="itin-evt">Cóctel de Bienvenida</div>
+          <div class="itin-desc">Brindis y aperitivos entre jardines.</div>
+        </div>
+      </li>
+      <!-- Evento 3 — izquierda -->
+      <li class="itin-event">
+        <div class="itin-card rv">
+          <div class="itin-card-corner" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="12" rx="5" ry="10" fill="#EFBFB3" opacity=".5" transform="rotate(-30 12 12)"/><ellipse cx="12" cy="12" rx="4" ry="8" fill="#B8C88D" opacity=".35" transform="rotate(20 12 12)"/></svg>
+          </div>
+          <div class="itin-time">19:30 hrs</div>
+          <div class="itin-evt">Cena &amp; Brindis</div>
+          <div class="itin-desc">Menú especial con palabras de los seres queridos.</div>
+        </div>
+        <div class="itin-center">
+          <div class="itin-leaf">
+            <svg viewBox="0 0 13 13" fill="none"><ellipse cx="6.5" cy="6.5" rx="5.5" ry="2.5" fill="#EFBFB3" opacity=".9" transform="rotate(-30 6.5 6.5)"/></svg>
+          </div>
+          <div class="itin-spacer"></div>
+        </div>
+        <div></div>
+      </li>
+      <!-- Evento 4 — derecha -->
+      <li class="itin-event itin-event--r">
+        <div></div>
+        <div class="itin-center">
+          <div class="itin-leaf">
+            <svg viewBox="0 0 13 13" fill="none"><ellipse cx="6.5" cy="6.5" rx="5.5" ry="2.5" fill="#B8C88D" opacity=".9" transform="rotate(30 6.5 6.5)"/></svg>
+          </div>
+          <div class="itin-spacer"></div>
+        </div>
+        <div class="itin-card rv">
+          <div class="itin-card-corner" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="12" rx="5" ry="10" fill="#B8C88D" opacity=".5" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="4" ry="8" fill="#EFBFB3" opacity=".35" transform="rotate(-20 12 12)"/></svg>
+          </div>
+          <div class="itin-time">21:00 hrs</div>
+          <div class="itin-evt">Vals &amp; Baile</div>
+          <div class="itin-desc">El primer baile y la pista para todos.</div>
+        </div>
+      </li>
+      <!-- Evento 5 — izquierda -->
+      <li class="itin-event">
+        <div class="itin-card rv">
+          <div class="itin-card-corner" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="12" rx="5" ry="10" fill="#EFBFB3" opacity=".5" transform="rotate(-30 12 12)"/></svg>
+          </div>
+          <div class="itin-time">22:00 hrs</div>
+          <div class="itin-evt">¡Fiesta!</div>
+          <div class="itin-desc">Música, risas y momentos que recordaremos siempre.</div>
+        </div>
+        <div class="itin-center">
+          <div class="itin-leaf">
+            <svg viewBox="0 0 13 13" fill="none"><ellipse cx="6.5" cy="6.5" rx="5.5" ry="2.5" fill="#EFBFB3" opacity=".9" transform="rotate(-30 6.5 6.5)"/></svg>
+          </div>
+          <div class="itin-spacer"></div>
+        </div>
+        <div></div>
+      </li>
+    </ul>
   </section>
 
-  <!-- ── ORNAMENTO A ── -->
-  <div class="ornament rv">
-    <svg viewBox="0 0 360 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".45"/>
-      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".45"/>
-      <path d="M138 38 C130 27 122 20 116 12" stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <path d="M108 24 C100 18 94 12 90 6"   stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#B8C88D" opacity=".55" transform="rotate(-32 152 33)"/>
-      <ellipse cx="124" cy="22" rx="11" ry="4.5" fill="#B8C88D" opacity=".5"  transform="rotate(-45 124 22)"/>
-      <ellipse cx="96"  cy="13" rx="9"  ry="3.5" fill="#B8C88D" opacity=".45" transform="rotate(-55 96 13)"/>
-      <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#B8C88D" opacity=".55" transform="rotate(32 208 33)"/>
-      <ellipse cx="236" cy="22" rx="11" ry="4.5" fill="#B8C88D" opacity=".5"  transform="rotate(45 236 22)"/>
-      <ellipse cx="264" cy="13" rx="9"  ry="3.5" fill="#B8C88D" opacity=".45" transform="rotate(55 264 13)"/>
-      <path d="M222 38 C230 27 238 20 244 12" stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <path d="M252 24 C260 18 266 12 270 6"  stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".75"/>
-      <circle cx="90"  cy="6"  r="2.8" fill="#EFBFB3" opacity=".68"/>
-      <circle cx="244" cy="12" r="3.2" fill="#EFBFB3" opacity=".75"/>
-      <circle cx="270" cy="6"  r="2.8" fill="#EFBFB3" opacity=".68"/>
-      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".5"/>
-      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".4"/>
+  <!-- ORNAMENTO -->
+  <div class="ornament ornament--b2s">
+    <svg viewBox="0 0 260 36" fill="none" width="260" height="36">
+      <path d="M20 18 Q66 14 112 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <path d="M148 18 Q194 14 240 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <ellipse cx="58" cy="12" rx="9" ry="3.5" fill="#EFBFB3" opacity=".55" transform="rotate(-18 58 12)"/>
+      <ellipse cx="202" cy="12" rx="9" ry="3.5" fill="#EFBFB3" opacity=".55" transform="rotate(18 202 12)"/>
+      <rect x="125" y="11" width="10" height="10" rx="1.5" transform="rotate(45 130 16)" fill="#EFBFB3" opacity=".5"/>
+      <circle cx="20" cy="18" r="2.2" fill="#EFBFB3" opacity=".6"/>
+      <circle cx="240" cy="18" r="2.2" fill="#EFBFB3" opacity=".6"/>
     </svg>
   </div>
 
-  <!-- ── 12. DRESS CODE ── -->
-  <section id="dresscode" class="sec sec--surface">
+  <!-- DRESS CODE -->
+  <section id="dresscode" class="sec sec--blush">
     <p class="eyebrow rv">Etiqueta</p>
     <h2 class="script-title rv">Dress Code</h2>
     <p class="dc-subtitle rv">Semi-Formal &middot; Elegante</p>
@@ -558,68 +678,86 @@ body{
         <div class="dc-col-ttl">Para Ellos</div>
         <ul class="dc-list">
           <li>Traje o pantalón y saco</li>
-          <li>Sin corbata</li>
+          <li>Sin corbata requerida</li>
           <li>Camisa de lino o algodón</li>
           <li>Mocasines o zapatos de vestir</li>
         </ul>
       </div>
     </div>
     <div class="dc-swatches" id="dcSwatches">
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#83934D"></div><span class="dc-sw-n">Sage Olive</span></div>
       <div class="dc-sw"><div class="dc-sw-c" style="background:#EFBFB3"></div><span class="dc-sw-n">Blush Rose</span></div>
+      <div class="dc-sw"><div class="dc-sw-c" style="background:#F5D4CC"></div><span class="dc-sw-n">Rosa Polvo</span></div>
+      <div class="dc-sw"><div class="dc-sw-c" style="background:#83934D"></div><span class="dc-sw-n">Sage Olive</span></div>
       <div class="dc-sw"><div class="dc-sw-c" style="background:#B8C88D"></div><span class="dc-sw-n">Pine Glade</span></div>
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#C9A84C"></div><span class="dc-sw-n">Mustard</span></div>
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#C47055"></div><span class="dc-sw-n">Terracotta</span></div>
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#7B92AA"></div><span class="dc-sw-n">Slate Blue</span></div>
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#2D4A6B"></div><span class="dc-sw-n">Navy Blue</span></div>
+      <div class="dc-sw"><div class="dc-sw-c" style="background:#C9A84C"></div><span class="dc-sw-n">Mostaza</span></div>
+      <div class="dc-sw"><div class="dc-sw-c" style="background:#C47055"></div><span class="dc-sw-n">Terracota</span></div>
+      <div class="dc-sw"><div class="dc-sw-c" style="background:#2D4A6B"></div><span class="dc-sw-n">Azul Navy</span></div>
       <div class="dc-sw"><div class="dc-sw-c" style="background:#E9DFB4"></div><span class="dc-sw-n">Rafia</span></div>
     </div>
-    <p class="dc-avoid rv">Evitar: Blanco &middot; Beige claro &middot; Rojo &mdash; reservados para los novios</p>
+    <p class="dc-avoid rv">Evitar: Blanco &middot; Beige claro &middot; Rojo</p>
     <div class="no-kids rv">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a7 7 0 0 1 13 0"/><line x1="18" y1="3" x2="21" y2="6"/><line x1="21" y1="3" x2="18" y2="6"/></svg>
       <span>Esta celebración es exclusiva para adultos. Agradecemos su comprensión.</span>
     </div>
   </section>
 
-  <!-- ── 13. GALERÍA ── -->
+  <!-- ORNAMENTO -->
+  <div class="ornament ornament--blush ornament--s2b">
+    <svg viewBox="0 0 360 68" fill="none" width="340" height="68">
+      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".35"/>
+      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".35"/>
+      <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".6" transform="rotate(-32 152 33)"/>
+      <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".6" transform="rotate(32 208 33)"/>
+      <circle cx="180" cy="52" r="3.5" fill="#EFBFB3" opacity=".6"/>
+      <path d="M180 62 L180 52" stroke="#EFBFB3" stroke-width="1" opacity=".4"/>
+    </svg>
+  </div>
+
+  <!-- GALERÍA — RUEDA DE LA FORTUNA -->
   <section id="galeria">
-    <p class="eyebrow rv">Nosotros</p>
-    <h2 class="script-title rv">Nuestra Historia</h2>
-    <div class="gal-wrap rv">
-      <div class="gal-carousel" id="galCarousel">
-        <div class="gal-slide active"><img src="foto1.jpg" alt="Naomi &amp; Leonardo"><div class="gal-vignette"></div></div>
-        <div class="gal-slide"><img src="foto2.jpg" alt="Naomi &amp; Leonardo"><div class="gal-vignette"></div></div>
-        <div class="gal-slide"><img src="foto3.jpg" alt="Naomi &amp; Leonardo"><div class="gal-vignette"></div></div>
-        <button class="gal-btn gal-prev" aria-label="Anterior"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
-        <button class="gal-btn gal-next" aria-label="Siguiente"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+    <div class="gallery-head">
+      <p class="eyebrow rv">Nosotros</p>
+      <h2 class="script-title rv">Nuestra Historia</h2>
+      <span class="gallery-sub rv">rueda de recuerdos</span>
+    </div>
+    <div class="wheel-stage">
+      <div class="wheel" id="wheel">
+        <span class="wheel-spoke" aria-hidden="true"></span>
+        <span class="wheel-spoke wheel-spoke--inner" aria-hidden="true"></span>
+        <div class="wheel-item" style="--i:0"><div class="wheel-item-inner"><img src="portada.jpg" alt="Naomi &amp; Leonardo" loading="lazy"></div></div>
+        <div class="wheel-item" style="--i:1"><div class="wheel-item-inner"><img src="foto1.jpg" alt="Naomi &amp; Leonardo" loading="lazy"></div></div>
+        <div class="wheel-item" style="--i:2"><div class="wheel-item-inner"><img src="foto2.jpg" alt="Naomi &amp; Leonardo" loading="lazy"></div></div>
+        <div class="wheel-item" style="--i:3"><div class="wheel-item-inner"><img src="foto3.jpg" alt="Naomi &amp; Leonardo" loading="lazy"></div></div>
       </div>
-      <div class="gal-dots">
-        <button class="gal-dot active" aria-label="Foto 1"></button>
-        <button class="gal-dot" aria-label="Foto 2"></button>
-        <button class="gal-dot" aria-label="Foto 3"></button>
+      <div class="wheel-hub" aria-hidden="true">
+        <svg viewBox="0 0 60 60" fill="none">
+          <g stroke="currentColor" stroke-width=".8" fill="none">
+            <circle cx="30" cy="30" r="18" opacity=".4"/>
+            <circle cx="30" cy="30" r="10"/>
+            <circle cx="30" cy="30" r="3" fill="currentColor"/>
+            <path d="M30 14 L30 20 M30 40 L30 46 M14 30 L20 30 M40 30 L46 30" opacity=".55"/>
+            <path d="M18 18 L22 22 M38 38 L42 42 M42 18 L38 22 M22 38 L18 42" opacity=".4"/>
+          </g>
+        </svg>
       </div>
     </div>
   </section>
 
-  <!-- ── ORNAMENTO B ── -->
-  <div class="ornament rv">
-    <svg viewBox="0 0 260 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 18 Q66 15 112 18" stroke="#83934D" stroke-width=".9" opacity=".4"/>
-      <path d="M148 18 Q194 15 240 18" stroke="#83934D" stroke-width=".9" opacity=".4"/>
-      <ellipse cx="58" cy="13" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(-18 58 13)"/>
-      <ellipse cx="85" cy="22" rx="7" ry="3"   fill="#83934D" opacity=".35" transform="rotate(12 85 22)"/>
-      <rect x="125" y="11" width="10" height="10" rx="1.5" transform="rotate(45 130 16)" fill="#83934D" opacity=".45"/>
-      <ellipse cx="130" cy="6"  rx="4" ry="2" fill="#B8C88D" opacity=".5"/>
-      <ellipse cx="130" cy="26" rx="4" ry="2" fill="#B8C88D" opacity=".5"/>
-      <ellipse cx="202" cy="13" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(18 202 13)"/>
-      <ellipse cx="175" cy="22" rx="7" ry="3"   fill="#83934D" opacity=".35" transform="rotate(-12 175 22)"/>
-      <circle cx="20" cy="18" r="2.2" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="240" cy="18" r="2.2" fill="#EFBFB3" opacity=".55"/>
+  <!-- ORNAMENTO -->
+  <div class="ornament ornament--surface ornament--b2s">
+    <svg viewBox="0 0 260 36" fill="none" width="260" height="36">
+      <path d="M20 18 Q66 14 112 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <path d="M148 18 Q194 14 240 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <ellipse cx="58" cy="12" rx="9" ry="3.5" fill="#EFBFB3" opacity=".6" transform="rotate(-18 58 12)"/>
+      <ellipse cx="202" cy="12" rx="9" ry="3.5" fill="#EFBFB3" opacity=".6" transform="rotate(18 202 12)"/>
+      <circle cx="130" cy="10" r="3.5" fill="#EFBFB3" opacity=".5"/>
+      <circle cx="20" cy="18" r="2.2" fill="#EFBFB3" opacity=".65"/>
+      <circle cx="240" cy="18" r="2.2" fill="#EFBFB3" opacity=".65"/>
     </svg>
   </div>
 
-  <!-- ── REGALOS ── -->
-  <section id="regalos">
+  <!-- REGALOS -->
+  <section id="regalos" class="sec sec--bg">
     <p class="eyebrow rv">Mesa de Regalos</p>
     <h2 class="script-title rv">Un Obsequio</h2>
     <div class="gift-card rv">
@@ -627,25 +765,23 @@ body{
         Tu presencia a nuestro lado es el regalo más valioso que podemos recibir.<br>
         Sin embargo, si deseas celebrar este día con un obsequio, con profunda gratitud te compartimos los siguientes datos:
       </p>
-      <!-- CLABE BBVA -->
       <div class="gift-divider"></div>
       <div class="gift-bank-name">BBVA &middot; Transferencia</div>
-      <div class="gift-account">012 180 01514360008 2</div>
+      <div class="gift-account">012180015143600082</div>
       <p class="gift-titular">Naomi Salgado Correa</p>
       <button onclick="copyCLABE()" class="btn-copy" id="btnCopyCLABE">
         <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
         Copiar CLABE
       </button>
-      <!-- Tiendas por confirmar -->
       <div class="gift-divider" style="margin-top:28px"></div>
       <div class="gift-stores">
         <div class="btn-store btn-amazon btn-pending" aria-disabled="true">
-          <svg viewBox="0 0 24 24"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.494.124.108.168.066.334-.124.496-.866.768-1.9 1.33-3.1 1.686a20.5 20.5 0 0 1-9.256.523c-2.897-.48-5.545-1.56-7.93-3.24-.154-.102-.196-.226-.126-.37zm6.02-9.366c0-1.29.324-2.37.978-3.24.654-.875 1.545-1.315 2.67-1.315 1.168 0 2.07.43 2.7 1.285.63.854.946 1.94.946 3.262 0 1.274-.324 2.336-.974 3.188-.648.854-1.548 1.278-2.698 1.278-1.156 0-2.05-.424-2.68-1.278-.627-.854-.94-1.916-.94-3.18zm2.68 10.36c-1.876 0-3.53-.39-4.962-1.167-1.432-.78-2.548-1.883-3.35-3.31-.8-1.428-1.2-3.07-1.2-4.924 0-1.793.402-3.385 1.204-4.776.802-1.39 1.912-2.47 3.33-3.238 1.42-.768 3.056-1.153 4.912-1.153 2.68 0 4.824.798 6.436 2.396 1.61 1.597 2.416 3.7 2.416 6.31 0 2.604-.808 4.71-2.424 6.32-1.614 1.608-3.756 2.544-6.362 2.544z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.494.124.108.168.066.334-.124.496-.866.768-1.9 1.33-3.1 1.686a20.5 20.5 0 0 1-9.256.523c-2.897-.48-5.545-1.56-7.93-3.24-.154-.102-.196-.226-.126-.37z"/></svg>
           Lista en Amazon
         </div>
         <span class="por-confirmar-tag">Por confirmar</span>
         <div class="btn-store btn-liverpool btn-pending" aria-disabled="true">
-          <svg viewBox="0 0 24 24"><path d="M20 7H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 12H4V9h16v10zM12 3H8V1H7v2H5V1H4v2c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V1h-1v2h-2V1h-1v2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M20 7H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 12H4V9h16v10z"/></svg>
           Lista en Liverpool
         </div>
         <span class="por-confirmar-tag">Por confirmar</span>
@@ -653,91 +789,235 @@ body{
     </div>
   </section>
 
-  <!-- ── ORNAMENTO ── -->
-  <div class="ornament ornament--b2s rv">
-    <svg viewBox="0 0 360 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".45"/>
-      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".45"/>
-      <path d="M138 38 C130 27 122 20 116 12" stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <path d="M222 38 C230 27 238 20 244 12" stroke="#83934D" stroke-width=".85" opacity=".5"/>
-      <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#B8C88D" opacity=".55" transform="rotate(-32 152 33)"/>
-      <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#B8C88D" opacity=".55" transform="rotate(32 208 33)"/>
+  <!-- ORNAMENTO -->
+  <div class="ornament ornament--b2s">
+    <svg viewBox="0 0 360 68" fill="none" width="340" height="68">
+      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".35"/>
+      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".35"/>
+      <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".5" transform="rotate(-32 152 33)"/>
+      <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".5" transform="rotate(32 208 33)"/>
       <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".75"/>
       <circle cx="244" cy="12" r="3.2" fill="#EFBFB3" opacity=".75"/>
-      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".5"/>
-      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".4"/>
+      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".4"/>
+      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".35"/>
     </svg>
   </div>
 
-  <!-- ── ÁLBUM ── -->
-  <section id="album">
+  <!-- ÁLBUM -->
+  <section id="album" class="sec sec--blush">
     <p class="eyebrow rv">Comparte el Momento</p>
     <h2 class="script-title rv">Álbum Compartido</h2>
     <p class="album-note rv">¡Queremos ver la boda a través de tus ojos! Próximamente compartiremos el enlace para que subas tus fotos y videos.</p>
     <div class="album-qr-wrap rv">
-      <div class="album-pending-box">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>Por confirmar</span>
+      <!-- QR placeholder botánico — se actualizará con el link real del Drive -->
+      <div style="position:relative;width:180px;height:180px">
+        <!-- Marco botánico alrededor del QR -->
+        <svg style="position:absolute;inset:-14px;width:208px;height:208px;pointer-events:none;z-index:2" viewBox="0 0 208 208" fill="none">
+          <!-- esquina TL -->
+          <path d="M20 4 C10 4 4 10 4 20" stroke="#EFBFB3" stroke-width="1.5" stroke-linecap="round" opacity=".8"/>
+          <ellipse cx="12" cy="8" rx="5" ry="2" fill="#EFBFB3" opacity=".6" transform="rotate(-40 12 8)"/>
+          <ellipse cx="6" cy="16" rx="5" ry="2" fill="#B8C88D" opacity=".5" transform="rotate(-70 6 16)"/>
+          <circle cx="4" cy="4" r="2.5" fill="#EFBFB3" opacity=".7"/>
+          <!-- esquina TR -->
+          <path d="M188 4 C198 4 204 10 204 20" stroke="#EFBFB3" stroke-width="1.5" stroke-linecap="round" opacity=".8"/>
+          <ellipse cx="196" cy="8" rx="5" ry="2" fill="#EFBFB3" opacity=".6" transform="rotate(40 196 8)"/>
+          <ellipse cx="202" cy="16" rx="5" ry="2" fill="#B8C88D" opacity=".5" transform="rotate(70 202 16)"/>
+          <circle cx="204" cy="4" r="2.5" fill="#EFBFB3" opacity=".7"/>
+          <!-- esquina BL -->
+          <path d="M20 204 C10 204 4 198 4 188" stroke="#EFBFB3" stroke-width="1.5" stroke-linecap="round" opacity=".8"/>
+          <ellipse cx="12" cy="200" rx="5" ry="2" fill="#EFBFB3" opacity=".6" transform="rotate(40 12 200)"/>
+          <ellipse cx="6" cy="192" rx="5" ry="2" fill="#B8C88D" opacity=".5" transform="rotate(70 6 192)"/>
+          <circle cx="4" cy="204" r="2.5" fill="#EFBFB3" opacity=".7"/>
+          <!-- esquina BR -->
+          <path d="M188 204 C198 204 204 198 204 188" stroke="#EFBFB3" stroke-width="1.5" stroke-linecap="round" opacity=".8"/>
+          <ellipse cx="196" cy="200" rx="5" ry="2" fill="#EFBFB3" opacity=".6" transform="rotate(-40 196 200)"/>
+          <ellipse cx="202" cy="192" rx="5" ry="2" fill="#B8C88D" opacity=".5" transform="rotate(-70 202 192)"/>
+          <circle cx="204" cy="204" r="2.5" fill="#EFBFB3" opacity=".7"/>
+        </svg>
+        <!-- QR placeholder con patrón SVG -->
+        <svg viewBox="0 0 180 180" fill="none" style="width:180px;height:180px;border-radius:12px;background:#FDFAF8;border:1.5px solid rgba(239,191,179,.4)">
+          <!-- Finder squares -->
+          <rect x="12" y="12" width="46" height="46" rx="4" fill="none" stroke="#44562F" stroke-width="2.5"/>
+          <rect x="18" y="18" width="34" height="34" rx="2" fill="#44562F" opacity=".12"/>
+          <rect x="24" y="24" width="22" height="22" rx="1.5" fill="#44562F" opacity=".7"/>
+          <rect x="122" y="12" width="46" height="46" rx="4" fill="none" stroke="#44562F" stroke-width="2.5"/>
+          <rect x="128" y="18" width="34" height="34" rx="2" fill="#44562F" opacity=".12"/>
+          <rect x="134" y="24" width="22" height="22" rx="1.5" fill="#44562F" opacity=".7"/>
+          <rect x="12" y="122" width="46" height="46" rx="4" fill="none" stroke="#44562F" stroke-width="2.5"/>
+          <rect x="18" y="128" width="34" height="34" rx="2" fill="#44562F" opacity=".12"/>
+          <rect x="24" y="134" width="22" height="22" rx="1.5" fill="#44562F" opacity=".7"/>
+          <!-- Data modules pattern -->
+          <rect x="72" y="12" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="84" y="12" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="96" y="12" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="72" y="24" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="84" y="24" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="96" y="24" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="72" y="36" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="84" y="36" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="96" y="36" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="12" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="24" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="36" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="48" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="12" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="24" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="36" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="48" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="12" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="24" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="36" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="48" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="60" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="72" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="84" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="96" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="108" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="120" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="60" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="72" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="84" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="96" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="108" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="120" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="60" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="72" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="84" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="96" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="108" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="120" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="132" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="144" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="156" y="72" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="132" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="144" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="156" y="84" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="132" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="144" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="156" y="96" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="60" y="108" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="72" y="108" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="84" y="108" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="96" y="108" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="60" y="120" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="72" y="120" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="84" y="120" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="96" y="120" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="60" y="132" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="72" y="132" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="84" y="132" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="96" y="132" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="60" y="144" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="72" y="144" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="84" y="144" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="60" y="156" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="72" y="156" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="84" y="156" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="108" y="108" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="120" y="108" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="132" y="108" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="144" y="108" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="156" y="108" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="108" y="120" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="120" y="120" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="132" y="120" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="144" y="120" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="156" y="120" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="108" y="132" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="120" y="132" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="132" y="132" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="144" y="132" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="156" y="132" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="108" y="144" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="120" y="144" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="132" y="144" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="144" y="144" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="156" y="144" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="108" y="156" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <rect x="120" y="156" width="8" height="8" rx="1" fill="#44562F" opacity=".3"/>
+          <rect x="132" y="156" width="8" height="8" rx="1" fill="#44562F" opacity=".5"/>
+          <rect x="144" y="156" width="8" height="8" rx="1" fill="#44562F" opacity=".4"/>
+          <rect x="156" y="156" width="8" height="8" rx="1" fill="#44562F" opacity=".6"/>
+          <!-- Centro decorativo blush -->
+          <circle cx="90" cy="90" r="16" fill="#EFBFB3" opacity=".18"/>
+          <circle cx="90" cy="90" r="10" fill="#EFBFB3" opacity=".25"/>
+          <!-- Hojita central -->
+          <ellipse cx="90" cy="90" rx="6" ry="10" fill="#83934D" opacity=".55" transform="rotate(-20 90 90)"/>
+          <ellipse cx="90" cy="90" rx="4" ry="7" fill="#B8C88D" opacity=".4" transform="rotate(30 90 90)"/>
+        </svg>
+        <p style="position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:9px;letter-spacing:2px;color:var(--blush);white-space:nowrap;opacity:.8">Por confirmar</p>
       </div>
       <span class="qr-label">Álbum de fotos</span>
     </div>
   </section>
 
-  <!-- ── ORNAMENTO ── -->
-  <div class="ornament ornament--s2b rv">
-    <svg viewBox="0 0 260 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 18 Q66 15 112 18" stroke="#83934D" stroke-width=".9" opacity=".4"/>
-      <path d="M148 18 Q194 15 240 18" stroke="#83934D" stroke-width=".9" opacity=".4"/>
-      <ellipse cx="58" cy="13" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(-18 58 13)"/>
-      <ellipse cx="85" cy="22" rx="7" ry="3"   fill="#83934D" opacity=".35" transform="rotate(12 85 22)"/>
-      <rect x="125" y="11" width="10" height="10" rx="1.5" transform="rotate(45 130 16)" fill="#83934D" opacity=".45"/>
-      <ellipse cx="130" cy="6"  rx="4" ry="2" fill="#B8C88D" opacity=".5"/>
-      <ellipse cx="130" cy="26" rx="4" ry="2" fill="#B8C88D" opacity=".5"/>
-      <ellipse cx="202" cy="13" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(18 202 13)"/>
-      <ellipse cx="175" cy="22" rx="7" ry="3"   fill="#83934D" opacity=".35" transform="rotate(-12 175 22)"/>
-      <circle cx="20" cy="18" r="2.2" fill="#EFBFB3" opacity=".55"/>
-      <circle cx="240" cy="18" r="2.2" fill="#EFBFB3" opacity=".55"/>
+  <!-- ORNAMENTO -->
+  <div class="ornament ornament--blush ornament--s2b">
+    <svg viewBox="0 0 260 36" fill="none" width="260" height="36">
+      <path d="M20 18 Q66 14 112 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <path d="M148 18 Q194 14 240 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <ellipse cx="85" cy="12" rx="9" ry="3.5" fill="#EFBFB3" opacity=".6" transform="rotate(-18 85 12)"/>
+      <ellipse cx="175" cy="12" rx="9" ry="3.5" fill="#EFBFB3" opacity=".6" transform="rotate(18 175 12)"/>
+      <circle cx="130" cy="18" r="3" fill="#EFBFB3" opacity=".6"/>
+      <circle cx="20" cy="18" r="2.2" fill="#EFBFB3" opacity=".6"/>
+      <circle cx="240" cy="18" r="2.2" fill="#EFBFB3" opacity=".6"/>
     </svg>
   </div>
 
-  <!-- ── 15. RSVP ── -->
-  <section id="rsvp" class="sec sec--bg">
+  <!-- RSVP -->
+  <section id="rsvp" class="sec sec--surface">
     <p class="eyebrow rv">Confirma tu Asistencia</p>
     <h2 class="script-title rv">R.S.V.P.</h2>
     <p class="rsvp-note rv">Fecha límite: 25 de Julio de 2026</p>
     <div class="rsvp-card rv">
       <div class="rsvp-field">
-        <label for="rsvpName">Nombre completo</label>
-        <input type="text" id="rsvpName" placeholder="Tu nombre completo" autocomplete="name">
-      </div>
-      <div class="rsvp-field">
         <label>Pases en tu invitación</label>
         <div class="rsvp-pases-display" id="rsvpPasesDisplay">—</div>
       </div>
+      <!-- Nombres dinámicos (se generan por JS según pases) -->
+      <div id="rsvpNombresWrap"></div>
       <div class="rsvp-field">
-        <label for="rsvpGuests">Número de asistentes</label>
-        <select id="rsvpGuests"></select>
-      </div>
-      <div class="rsvp-field">
-        <label for="rsvpAttend">¿Asistirás?</label>
+        <label for="rsvpAttend">¿Asistirán?</label>
         <select id="rsvpAttend">
           <option value="Sí, con gusto">Sí, con gusto</option>
-          <option value="Lo siento, no podré">Lo siento, no podré</option>
+          <option value="Lo siento, no podremos">Lo siento, no podremos</option>
         </select>
       </div>
       <div class="rsvp-field">
         <label for="rsvpMsg">Mensaje para los novios</label>
         <textarea id="rsvpMsg" placeholder="Escribe algo especial para Naomi &amp; Leonardo…"></textarea>
       </div>
-      <button class="btn-wa" onclick="sendRsvp()">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.165-.008-.35-.01-.534-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.559 4.122 1.535 5.858L0 24l6.335-1.513A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 0 1-5.003-1.374l-.359-.213-3.724.889.923-3.614-.234-.373A9.773 9.773 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-        Confirmar por WhatsApp
+      <!-- Botón WhatsApp estilo Jardines Botánicos -->
+      <button class="btn-wa-bot" onclick="sendRsvp()">
+        <!-- hoja izquierda decorativa -->
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="9" rx="4" ry="8" fill="currentColor" opacity=".7" transform="rotate(-30 9 9)"/>
+          <ellipse cx="9" cy="9" rx="3" ry="6" fill="currentColor" opacity=".4" transform="rotate(25 9 9)"/>
+        </svg>
+        <!-- ícono WhatsApp -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.165-.008-.35-.01-.534-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.559 4.122 1.535 5.858L0 24l6.335-1.513A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 0 1-5.003-1.374l-.359-.213-3.724.889.923-3.614-.234-.373A9.773 9.773 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        <span>Confirmar por WhatsApp</span>
+        <!-- hoja derecha decorativa -->
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="9" rx="4" ry="8" fill="currentColor" opacity=".7" transform="rotate(30 9 9)"/>
+          <ellipse cx="9" cy="9" rx="3" ry="6" fill="currentColor" opacity=".4" transform="rotate(-25 9 9)"/>
+        </svg>
       </button>
     </div>
   </section>
 
-  <!-- ── 16. FOOTER ── -->
+  <!-- FOOTER -->
   <footer id="footer">
+    <!-- Bottom botanical frame -->
+    <svg style="display:block;margin:0 auto 20px;opacity:.5" viewBox="0 0 200 40" fill="none" width="200" height="40">
+      <path d="M100 38 C80 28 50 20 10 10" stroke="#EFBFB3" stroke-width="1" opacity=".7"/>
+      <path d="M100 38 C120 28 150 20 190 10" stroke="#EFBFB3" stroke-width="1" opacity=".7"/>
+      <ellipse cx="55" cy="24" rx="8" ry="3" fill="#EFBFB3" opacity=".5" transform="rotate(-30 55 24)"/>
+      <ellipse cx="145" cy="24" rx="8" ry="3" fill="#EFBFB3" opacity=".5" transform="rotate(30 145 24)"/>
+      <circle cx="14" cy="11" r="2.5" fill="#EFBFB3" opacity=".65"/>
+      <circle cx="186" cy="11" r="2.5" fill="#EFBFB3" opacity=".65"/>
+      <circle cx="100" cy="32" r="3" fill="#EFBFB3" opacity=".55"/>
+    </svg>
     <div class="footer-names rv">Naomi &amp; Leonardo</div>
     <div class="footer-date rv">07 &middot; Agosto &middot; 2026</div>
     <div class="footer-hr"></div>
@@ -746,7 +1026,13 @@ body{
 
 </div><!-- /.wrap -->
 
-<!-- ── MUSIC FAB ── -->
+<!-- LIGHTBOX -->
+<div id="lightbox" aria-hidden="true" role="dialog">
+  <button id="lightbox-close" aria-label="Cerrar">&times;</button>
+  <img id="lightbox-img" alt="">
+</div>
+
+<!-- MUSIC FAB -->
 <button class="music-fab" id="musicFab" aria-label="Reproducir música de fondo" title="Música — Por confirmar">
   <svg class="ic-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
   <svg class="ic-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
@@ -756,7 +1042,7 @@ body{
 </audio>
 <div id="env-flash"></div>
 
-<!-- ── SCRIPTS ── -->
+<!-- SCRIPTS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous"></script>
 <script>
@@ -766,14 +1052,28 @@ window.addEventListener('load',()=>window.scrollTo(0,0));
 window.addEventListener('beforeunload',()=>window.scrollTo(0,0));
 gsap.registerPlugin(ScrollTrigger);
 
-/* ─── PASES URL PARAM ─── */
+/* ─── PASES URL PARAM + NOMBRES DINÁMICOS ─── */
 (function(){
   const pases=parseInt(new URLSearchParams(window.location.search).get('pases'),10);
   const display=document.getElementById('rsvpPasesDisplay');
-  const select=document.getElementById('rsvpGuests');
-  const max=(!isNaN(pases)&&pases>0)?pases:6;
-  display.textContent=(!isNaN(pases)&&pases>0)?(pases===1?'1 pase':pases+' pases'):'Ver tu invitación';
-  for(let i=1;i<=max;i++){const o=document.createElement('option');o.value=i;o.textContent=i===1?'1 persona':i+' personas';select.appendChild(o);}
+  const nombresWrap=document.getElementById('rsvpNombresWrap');
+  const max=(!isNaN(pases)&&pases>0)?pases:1;
+  display.textContent=(!isNaN(pases)&&pases>0)?(pases===1?'1 pase':pases+' pases'):'—';
+  /* Generar campos de nombre: uno por pase */
+  for(let i=1;i<=max;i++){
+    const div=document.createElement('div');
+    div.className='rsvp-field';
+    const lbl=document.createElement('label');
+    lbl.setAttribute('for','rsvpName'+i);
+    lbl.textContent=max===1?'Tu nombre completo':'Nombre del invitado '+i;
+    const inp=document.createElement('input');
+    inp.type='text';inp.id='rsvpName'+i;
+    inp.placeholder=max===1?'Tu nombre completo':'Nombre del asistente '+i;
+    inp.autocomplete=i===1?'name':'off';
+    div.appendChild(lbl);div.appendChild(inp);
+    nombresWrap.appendChild(div);
+  }
+  window._rsvpPases=max;
 })();
 
 /* ─── LOADER ─── */
@@ -781,7 +1081,7 @@ function initLoader(){
   const letters=document.querySelectorAll('.ld-mono span');
   const tag=document.getElementById('ldTag');
   const loader=document.getElementById('loader');
-  const tl=gsap.timeline({onComplete(){gsap.to(loader,{opacity:0,duration:1.3,delay:.5,onComplete(){loader.style.display='none';initAll();}});}});
+  const tl=gsap.timeline({onComplete(){gsap.to(loader,{opacity:0,duration:1.3,delay:.5,onComplete(){loader.style.display='none';initEnvelope();}});}});
   letters.forEach((l,i)=>tl.fromTo(l,{y:22,opacity:0},{y:0,opacity:1,duration:.5,ease:'power2.out'},i*.14));
   tl.fromTo(tag,{opacity:0,y:10},{opacity:1,y:0,duration:.6,ease:'power2.out'},letters.length*.14+.1);
 }
@@ -815,56 +1115,71 @@ function initEnvelope(){
   envScreen.addEventListener('touchstart',onTap,{passive:false});
 }
 
-/* ─── PARTÍCULAS BOTÁNICAS (hojas + flores) ─── */
+/* ─── PARTÍCULAS BOTÁNICAS: hojas + estrellas blush ─── */
 (function(){
-  /* Colores: verdes Florest Moth + blush + cream */
   const leafColors=['#B8C88D','#83934D','#E9DFB4','#A3B570','#C8D4A0'];
-  const blushColors=['#EFBFB3','#F5D4CC','#EBE3BC'];
+  const blushColors=['#EFBFB3','#F5D4CC','#F8E2DC'];
   const wrap=document.getElementById('petals');
+  const prefRed=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(prefRed) return;
 
-  for(let i=0;i<32;i++){
+  for(let i=0;i<44;i++){
     const p=document.createElement('div');
-    const isBlush=i%5===0;
-    const size=isBlush?(5+Math.random()*7):(8+Math.random()*14);
-    const h=isBlush?size:(size*(0.9+Math.random()*.6));
-    p.className='petal '+(isBlush?'oval':'leaf');
-    const colors=isBlush?blushColors:leafColors;
+    // every 3rd particle = blush star, every 5th = blush oval, rest = green leaf
+    const isStar=(i%3===0);
+    const isOval=(i%5===0&&!isStar);
+    const size=isStar?(4+Math.random()*5):(isOval?(5+Math.random()*7):(8+Math.random()*13));
+    const h=isStar?size:(isOval?size:(size*(0.9+Math.random()*.6)));
+    p.className='petal '+(isStar?'star':(isOval?'oval':'leaf'));
+    const colors=isStar?blushColors:(isOval?blushColors:leafColors);
     p.style.cssText=[
       `width:${size}px`,`height:${h}px`,
       `left:${Math.random()*100}%`,
       `background:${colors[i%colors.length]}`,
-      `opacity:${(0.25+Math.random()*.5).toFixed(2)}`
+      `opacity:${(0.2+Math.random()*.55).toFixed(2)}`
     ].join(';');
     wrap.appendChild(p);
-    const dur=38+Math.random()*24;
+    const dur=36+Math.random()*22;
+    // Stars and ovals fall more vertically, leaves drift
+    const xDrift=isStar?(Math.random()-.5)*20:(Math.random()-.5)*80;
+    const rotRange=isStar?0:(Math.random()*360)+(Math.random()>.5?300:-300);
     gsap.fromTo(p,
       {y:-50,rotation:Math.random()*360,x:0},
-      {y:window.innerHeight+90,rotation:(Math.random()*360)+(Math.random()>.5?320:-320),x:(Math.random()-.5)*80,duration:dur,ease:'none',repeat:-1,delay:-Math.random()*dur,repeatRefresh:true}
+      {y:window.innerHeight+90,rotation:rotRange,x:xDrift,duration:dur,ease:'none',repeat:-1,delay:-Math.random()*dur,repeatRefresh:true}
     );
   }
 })();
 
-/* ─── COUNTDOWN ─── */
-(function(){
-  const TARGET=new Date('2026-08-07T18:00:00-05:00').getTime();
-  const pad=(n,w=2)=>String(n).padStart(w,'0');
-  function tick(){
-    const diff=TARGET-Date.now();
-    if(diff<=0){['cdDias','cdHoras','cdMins','cdSecs'].forEach(id=>document.getElementById(id).textContent='00');return;}
-    document.getElementById('cdDias').textContent=pad(Math.floor(diff/86400000),3);
-    document.getElementById('cdHoras').textContent=pad(Math.floor(diff%86400000/3600000));
-    document.getElementById('cdMins').textContent=pad(Math.floor(diff%3600000/60000));
-    document.getElementById('cdSecs').textContent=pad(Math.floor(diff%60000/1000));
-  }
-  tick();setInterval(tick,1000);
-})();
+/* ─── COUNTDOWN (flipOn style) ─── */
+const countTarget=new Date('2026-08-07T18:00:00-05:00').getTime();
+const cdEls={d:document.getElementById('cd-d'),h:document.getElementById('cd-h'),m:document.getElementById('cd-m'),s:document.getElementById('cd-s')};
+let lastVals={d:'',h:'',m:'',s:''};
+function flipOn(el,newVal){
+  if(!el||el.textContent===newVal)return;
+  gsap.fromTo(el,{rotateX:0},{rotateX:-90,duration:.24,ease:'power2.in',onComplete:()=>{
+    el.textContent=newVal;
+    gsap.fromTo(el,{rotateX:90},{rotateX:0,duration:.34,ease:'power3.out'});
+  }});
+}
+function tick(){
+  const d=Math.max(0,countTarget-Date.now());
+  const dd=String(Math.floor(d/86400000)).padStart(3,'0');
+  const hh=String(Math.floor(d%86400000/3600000)).padStart(2,'0');
+  const mm=String(Math.floor(d%3600000/60000)).padStart(2,'0');
+  const ss=String(Math.floor(d%60000/1000)).padStart(2,'0');
+  if(dd!==lastVals.d){flipOn(cdEls.d,dd);lastVals.d=dd}
+  if(hh!==lastVals.h){flipOn(cdEls.h,hh);lastVals.h=hh}
+  if(mm!==lastVals.m){flipOn(cdEls.m,mm);lastVals.m=mm}
+  if(ss!==lastVals.s){flipOn(cdEls.s,ss);lastVals.s=ss}
+}
+tick();setInterval(tick,1000);
 
 /* ─── MUSIC FAB ─── */
 (function(){
   const audio=document.getElementById('bgAudio');
   const fab=document.getElementById('musicFab');
   audio.volume=0.18;
-  function tryPlay(){audio.play().then(()=>fab.classList.add('playing')).catch(()=>{fab.classList.remove('playing');const u=()=>{audio.play().then(()=>fab.classList.add('playing')).catch(()=>{});document.removeEventListener('touchstart',u);document.removeEventListener('click',u);};document.addEventListener('touchstart',u,{once:true});document.addEventListener('click',u,{once:true});});}
+  function tryPlay(){audio.play().then(()=>fab.classList.add('playing')).catch(()=>{const u=()=>{audio.play().then(()=>fab.classList.add('playing')).catch(()=>{});document.removeEventListener('touchstart',u);document.removeEventListener('click',u);};document.addEventListener('touchstart',u,{once:true});document.addEventListener('click',u,{once:true});});}
   window._startAudio=tryPlay;
   fab.addEventListener('click',e=>{e.stopPropagation();if(audio.paused){audio.play().then(()=>fab.classList.add('playing')).catch(()=>{});}else{audio.pause();fab.classList.remove('playing');}});
 })();
@@ -879,56 +1194,114 @@ function copyCLABE(){
 
 /* ─── RSVP → WHATSAPP ─── */
 function sendRsvp(){
-  const name=document.getElementById('rsvpName').value.trim()||'(sin nombre)';
+  const max=window._rsvpPases||1;
+  const nombres=[];
+  for(let i=1;i<=max;i++){
+    const el=document.getElementById('rsvpName'+i);
+    if(el)nombres.push(el.value.trim()||'(sin nombre)');
+  }
   const attend=document.getElementById('rsvpAttend').value;
-  const guests=document.getElementById('rsvpGuests').value;
   const message=document.getElementById('rsvpMsg').value.trim()||'—';
-  const text=['¡Hola Naomi & Leonardo! 🌿','',`*Nombre:* ${name}`,`*Asistencia:* ${attend}`,`*Personas:* ${guests}`,`*Mensaje:* ${message}`].join('\n');
-  window.open('https://wa.me/5215610326300?text='+encodeURIComponent(text),'_blank');
+  const nombresStr=nombres.map((n,i)=>`  ${i+1}. ${n}`).join('\n');
+  const lines=['🌿 ¡Hola Naomi & Leonardo! 🌿','',
+    `*Asistencia:* ${attend}`,
+    `*Personas (${max} pase${max>1?'s':''}):`,''+nombresStr,
+    `*Mensaje:* ${message}`];
+  window.open('https://wa.me/5215610326300?text='+encodeURIComponent(lines.join('\n')),'_blank');
 }
 
-/* ─── ANIMACIONES ─── */
+/* ─── ANIMACIONES PRINCIPALES ─── */
 function initAll(){
+  const prefRed=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* scroll reveal genérico */
   document.querySelectorAll('.rv').forEach(el=>{
-    gsap.fromTo(el,{y:36,opacity:0},{y:0,opacity:1,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none none'}});
+    gsap.fromTo(el,{y:30,opacity:0},{y:0,opacity:1,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none none'}});
   });
 
-  const itinTrig={trigger:'#itinGrid',start:'top 82%',toggleActions:'play none none none'};
-  gsap.fromTo('.itin-spine',{scaleY:0},{scaleY:1,duration:1.6,ease:'power2.inOut',scrollTrigger:itinTrig});
-  document.querySelectorAll('.itin-row-l,.itin-row-r').forEach((el,i)=>{
-    gsap.fromTo(el,{x:el.classList.contains('itin-row-r')?50:-50,opacity:0},{x:0,opacity:1,duration:.7,ease:'power3.out',delay:.2+i*.32,scrollTrigger:itinTrig});
-  });
-  document.querySelectorAll('.itin-dot').forEach((dot,i)=>{
-    gsap.fromTo(dot,{scale:0,opacity:0},{scale:1,opacity:1,duration:.45,ease:'back.out(3.5)',delay:.35+i*.32,scrollTrigger:itinTrig});
-    gsap.fromTo(dot,{boxShadow:'0 0 0 0 rgba(131,147,77,.65)'},{boxShadow:'0 0 0 10px rgba(131,147,77,0)',duration:.7,ease:'power2.out',delay:.7+i*.32,scrollTrigger:itinTrig});
-  });
+  /* countdown cards */
+  gsap.fromTo('.cd-block',{opacity:0,y:40,rotateX:-30},{opacity:1,y:0,rotateX:0,duration:1.1,stagger:.12,ease:'power4.out',scrollTrigger:{trigger:'.countdown-grid',start:'top 82%'}});
+  gsap.fromTo('#countdown .eyebrow,#countdown .script-title,.countdown-sub',{opacity:0,y:14},{opacity:1,y:0,duration:.9,stagger:.1,scrollTrigger:{trigger:'#countdown',start:'top 78%'}});
+
+  /* itinerario */
+  const itin=document.getElementById('itinList');
+  if(itin){
+    const cards=itin.querySelectorAll('.itin-card');
+    const leaves=itin.querySelectorAll('.itin-leaf');
+    cards.forEach((c,i)=>{
+      const isRight=c.closest('.itin-event--r');
+      gsap.fromTo(c,{x:isRight?50:-50,opacity:0},{x:0,opacity:1,duration:.8,ease:'power3.out',delay:i*.15,scrollTrigger:{trigger:itin,start:'top 82%'}});
+    });
+    gsap.fromTo(leaves,{scale:0,opacity:0},{scale:1,opacity:1,duration:.5,ease:'back.out(2.5)',stagger:.15,delay:.1,scrollTrigger:{trigger:itin,start:'top 82%'}});
+    gsap.fromTo('.itin-vine',{scaleY:0},{scaleY:1,duration:2,ease:'power2.inOut',transformOrigin:'top center',scrollTrigger:{trigger:itin,start:'top 82%',end:'bottom 60%',scrub:.8}});
+  }
+
+  /* dc swatches */
   document.querySelectorAll('#dcSwatches .dc-sw-c').forEach((el,i)=>{
-    gsap.fromTo(el,{scale:0,opacity:0},{scale:1,opacity:1,duration:.45,ease:'back.out(2)',delay:i*.08,scrollTrigger:{trigger:'#dcSwatches',start:'top 88%',toggleActions:'play none none none'}});
+    gsap.fromTo(el,{scale:0,opacity:0},{scale:1,opacity:1,duration:.45,ease:'back.out(2)',delay:i*.08,scrollTrigger:{trigger:'#dcSwatches',start:'top 88%'}});
   });
+
+  /* wheel of fortune */
+  const wheelEl=document.getElementById('wheel');
+  const wheelItems=wheelEl?wheelEl.querySelectorAll('.wheel-item-inner'):[];
+  if(wheelEl&&!prefRed){
+    gsap.fromTo('.wheel-item',{opacity:0,scale:.4},{opacity:1,scale:1,duration:1.2,stagger:.1,ease:'back.out(1.3)',scrollTrigger:{trigger:'.wheel-stage',start:'top 78%'}});
+    gsap.fromTo('.wheel-hub',{opacity:0,scale:.3,rotate:-60},{opacity:1,scale:1,rotate:0,duration:1.4,ease:'back.out(1.6)',scrollTrigger:{trigger:'.wheel-stage',start:'top 78%'}});
+    gsap.fromTo('.wheel-spoke',{opacity:0,scale:.8},{opacity:.45,scale:1,duration:1.4,ease:'power3.out',scrollTrigger:{trigger:'.wheel-stage',start:'top 78%'}});
+    const wTL=gsap.timeline({scrollTrigger:{trigger:'.wheel-stage',start:'top bottom',end:'bottom top',scrub:1.2}});
+    wTL.to(wheelEl,{rotation:360,ease:'none'},0);
+    wTL.to(wheelItems,{rotation:-360,ease:'none'},0);
+  }
+  gsap.fromTo('.gallery-head>*',{opacity:0,y:18},{opacity:1,y:0,duration:1,stagger:.1,scrollTrigger:{trigger:'.gallery-head',start:'top 80%'}});
+
+  /* lightbox */
   (function(){
-    const slides=document.querySelectorAll('.gal-slide');
-    const dots=document.querySelectorAll('.gal-dot');
-    const prev=document.querySelector('.gal-prev');
-    const next=document.querySelector('.gal-next');
-    let cur=0,timer;
-    function goTo(n){slides[cur].classList.remove('active');dots[cur].classList.remove('active');cur=((n%slides.length)+slides.length)%slides.length;slides[cur].classList.add('active');dots[cur].classList.add('active');}
-    function reset(){clearInterval(timer);timer=setInterval(()=>goTo(cur+1),4000);}
-    let sx=0;
-    const c=document.getElementById('galCarousel');
-    c.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;},{passive:true});
-    c.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40){goTo(cur+(dx<0?1:-1));reset();}},{passive:true});
-    prev.addEventListener('click',()=>{goTo(cur-1);reset();});
-    next.addEventListener('click',()=>{goTo(cur+1);reset();});
-    dots.forEach((d,i)=>d.addEventListener('click',()=>{goTo(i);reset();}));
-    reset();
+    const lb=document.getElementById('lightbox');
+    const lbImg=document.getElementById('lightbox-img');
+    const lbCls=document.getElementById('lightbox-close');
+    if(!lb||!lbImg)return;
+    let open=false;
+    function openLightbox(src,alt){
+      if(open)return;open=true;
+      lbImg.src=src;lbImg.alt=alt||'';
+      lb.classList.add('is-open');lb.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+      gsap.to(lb,{opacity:1,duration:.38,ease:'power2.out'});
+      gsap.to(lbImg,{opacity:1,scale:1,duration:.55,ease:'power3.out',delay:.05});
+    }
+    function closeLightbox(){
+      if(!open)return;open=false;
+      gsap.to(lbImg,{opacity:0,scale:.88,duration:.32,ease:'power2.in'});
+      gsap.to(lb,{opacity:0,duration:.35,ease:'power2.in',delay:.05,onComplete:()=>{
+        lb.classList.remove('is-open');lb.setAttribute('aria-hidden','true');
+        document.body.style.overflow='';lbImg.removeAttribute('src');
+      }});
+    }
+    document.querySelectorAll('.wheel-item-inner').forEach(el=>{
+      const img=el.querySelector('img');if(!img)return;
+      el.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();openLightbox(img.currentSrc||img.src,img.alt);});
+    });
+    lb.addEventListener('click',e=>{if(e.target===lb)closeLightbox();});
+    lbCls.addEventListener('click',closeLightbox);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)closeLightbox();});
   })();
+
   const sh=document.getElementById('scrollHint');
   if(sh){const hide=()=>{sh.classList.add('hidden');window.removeEventListener('scroll',hide);};window.addEventListener('scroll',hide,{passive:true});}
   ScrollTrigger.refresh();
   if(typeof window._startAudio==='function') window._startAudio();
 }
 
-initEnvelope();
+/* ─── BOOT ─── */
+(function(){
+  const loader=document.getElementById('loader');
+  loader.classList.add('active');
+  window.addEventListener('load',()=>{
+    initLoader();
+  });
+  // fallback if already loaded
+  if(document.readyState==='complete') initLoader();
+})();
 </script>
 </body>
 </html>
