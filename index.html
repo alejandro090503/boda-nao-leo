@@ -153,8 +153,10 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 
 /* ── ITINERARIO BOTÁNICO ── */
 #itinerario{padding:72px 20px;background:var(--bg);text-align:center;position:relative;overflow:hidden}
-.itin-vine{position:absolute;left:50%;top:140px;bottom:60px;width:1px;transform:translateX(-50%);background:linear-gradient(to bottom,transparent,rgba(131,147,77,.25) 8%,rgba(131,147,77,.25) 92%,transparent);pointer-events:none}
-.itin-vine::before{content:'';position:absolute;top:0;left:-4px;right:-4px;bottom:0;background:linear-gradient(to bottom,transparent,rgba(239,191,179,.15) 8%,rgba(239,191,179,.15) 92%,transparent);filter:blur(3px)}
+.itin-vine-wrap{position:absolute;left:50%;top:140px;bottom:60px;width:2px;transform:translateX(-50%);pointer-events:none;overflow:visible}
+.itin-vine{position:absolute;top:0;left:0;right:0;height:0%;background:linear-gradient(to bottom,rgba(131,147,77,.15),rgba(131,147,77,.35) 6%,rgba(131,147,77,.35));overflow:visible}
+.itin-vine::before{content:'';position:absolute;top:0;left:-4px;right:-4px;bottom:0;background:linear-gradient(to bottom,transparent,rgba(239,191,179,.18) 6%,rgba(239,191,179,.18));filter:blur(3px)}
+.itin-vine-tip{position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;background:radial-gradient(circle,#F5D4CC 0%,rgba(239,191,179,.55) 55%,transparent 80%);box-shadow:0 0 10px 5px rgba(245,212,204,.55),0 0 22px 10px rgba(239,191,179,.22);pointer-events:none}
 .itin-list{list-style:none;margin-top:48px;display:flex;flex-direction:column;gap:0}
 .itin-event{display:grid;grid-template-columns:1fr 48px 1fr;align-items:start;position:relative;padding:16px 0}
 .itin-card{background:var(--card);border-radius:16px;padding:18px 16px;box-shadow:0 2px 8px rgba(239,191,179,.2),0 8px 28px -8px rgba(68,86,47,.1);position:relative;text-align:left;border:1px solid rgba(239,191,179,.35)}
@@ -200,7 +202,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 .wheel-spoke--inner{inset:36%;border:1px solid rgba(131,147,77,.35);opacity:.55}
 .wheel-hub{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:clamp(95px,12vw,132px);height:clamp(95px,12vw,132px);border-radius:50%;background:radial-gradient(circle,var(--card) 0%,var(--card) 55%,transparent 80%);border:1px solid rgba(239,191,179,.6);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 2px 10px rgba(239,191,179,.3),0 6px 20px -6px rgba(68,86,47,.18);z-index:3}
 .wheel-hub svg{width:62%;height:auto;color:var(--blush)}
-.wheel-item{position:absolute;top:50%;left:50%;width:clamp(118px,18vw,178px);height:clamp(158px,24.5vw,238px);margin-left:calc(clamp(118px,18vw,178px)/-2);margin-top:calc(clamp(158px,24.5vw,238px)/-2);--angle:calc(90deg * var(--i));transform:rotate(var(--angle)) translateY(calc(-1 * min(240px,30vw)));transform-origin:center center}
+.wheel-item{position:absolute;top:50%;left:50%;width:clamp(100px,15vw,148px);height:clamp(136px,21vw,200px);margin-left:calc(clamp(100px,15vw,148px)/-2);margin-top:calc(clamp(136px,21vw,200px)/-2);--angle:calc(60deg * var(--i));transform:rotate(var(--angle)) translateY(calc(-1 * min(240px,30vw)));transform-origin:center center}
 .wheel-item-inner{width:100%;height:100%;transform:rotate(calc(-1 * var(--angle)));transform-origin:center center;position:relative;overflow:hidden;border:1px solid rgba(239,191,179,.5);background:var(--card);box-shadow:0 2px 4px rgba(68,86,47,.07),0 8px 20px -6px rgba(68,86,47,.18),0 24px 60px -28px rgba(68,86,47,.3);transition:box-shadow .5s;cursor:zoom-in}
 .wheel-item-inner::after{content:"";position:absolute;inset:6px;border:1px solid rgba(253,246,242,.35);pointer-events:none;z-index:2}
 .wheel-item-inner img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95) contrast(1.03)}
@@ -308,8 +310,8 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 
 <!-- ENVELOPE -->
 <div id="envelope-screen">
-  <img id="envImage" src="sobre.jpg" alt="Invitación de boda">
-  <video id="envVideo" src="apertura.mp4" muted playsinline preload="auto" poster="sobre.jpg"></video>
+  <img id="envImage" src="sobre.png" alt="Invitación de boda">
+  <video id="envVideo" src="apertura.mp4" muted playsinline preload="auto" poster="sobre.png"></video>
   <div class="env-tap" id="envTap">Toca para abrir</div>
 </div>
 
@@ -320,25 +322,6 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   <section id="hero">
     <div class="hero-bg"></div>
     <div class="hero-veil"></div>
-    <!-- Botanical watercolor corner decoration -->
-    <svg style="position:absolute;top:16px;left:12px;width:90px;height:90px;opacity:.55;pointer-events:none;z-index:2" viewBox="0 0 90 90" fill="none">
-      <path d="M10 80 C20 55 35 30 80 10" stroke="#EFBFB3" stroke-width="1" opacity=".6"/>
-      <ellipse cx="22" cy="62" rx="10" ry="4" fill="#EFBFB3" opacity=".5" transform="rotate(-42 22 62)"/>
-      <ellipse cx="38" cy="44" rx="9" ry="3.5" fill="#B8C88D" opacity=".45" transform="rotate(-50 38 44)"/>
-      <ellipse cx="54" cy="28" rx="8" ry="3" fill="#EFBFB3" opacity=".4" transform="rotate(-52 54 28)"/>
-      <circle cx="72" cy="14" r="3" fill="#EFBFB3" opacity=".6"/>
-      <circle cx="75" cy="11" r="1.8" fill="#F5D4CC" opacity=".5"/>
-      <circle cx="69" cy="11" r="1.8" fill="#F5D4CC" opacity=".5"/>
-    </svg>
-    <svg style="position:absolute;top:16px;right:12px;width:90px;height:90px;opacity:.55;pointer-events:none;z-index:2;transform:scaleX(-1)" viewBox="0 0 90 90" fill="none">
-      <path d="M10 80 C20 55 35 30 80 10" stroke="#EFBFB3" stroke-width="1" opacity=".6"/>
-      <ellipse cx="22" cy="62" rx="10" ry="4" fill="#EFBFB3" opacity=".5" transform="rotate(-42 22 62)"/>
-      <ellipse cx="38" cy="44" rx="9" ry="3.5" fill="#B8C88D" opacity=".45" transform="rotate(-50 38 44)"/>
-      <ellipse cx="54" cy="28" rx="8" ry="3" fill="#EFBFB3" opacity=".4" transform="rotate(-52 54 28)"/>
-      <circle cx="72" cy="14" r="3" fill="#EFBFB3" opacity=".6"/>
-      <circle cx="75" cy="11" r="1.8" fill="#F5D4CC" opacity=".5"/>
-      <circle cx="69" cy="11" r="1.8" fill="#F5D4CC" opacity=".5"/>
-    </svg>
     <div class="hero-content">
       <span class="hero-bride rv">Naomi</span>
       <span class="hero-amp rv">&amp;</span>
@@ -408,19 +391,6 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 
   <!-- COUNTDOWN -->
   <section id="countdown" class="sec--blush">
-    <!-- Botanical watercolor frame corners -->
-    <svg style="position:absolute;top:20px;left:16px;width:70px;height:70px;opacity:.45;pointer-events:none" viewBox="0 0 70 70" fill="none">
-      <path d="M5 65 C15 45 30 20 65 5" stroke="#EFBFB3" stroke-width="1.2" opacity=".6"/>
-      <ellipse cx="16" cy="50" rx="9" ry="3.5" fill="#EFBFB3" opacity=".5" transform="rotate(-42 16 50)"/>
-      <ellipse cx="32" cy="30" rx="8" ry="3" fill="#B8C88D" opacity=".4" transform="rotate(-50 32 30)"/>
-      <circle cx="58" cy="9" r="3" fill="#EFBFB3" opacity=".65"/>
-    </svg>
-    <svg style="position:absolute;top:20px;right:16px;width:70px;height:70px;opacity:.45;pointer-events:none;transform:scaleX(-1)" viewBox="0 0 70 70" fill="none">
-      <path d="M5 65 C15 45 30 20 65 5" stroke="#EFBFB3" stroke-width="1.2" opacity=".6"/>
-      <ellipse cx="16" cy="50" rx="9" ry="3.5" fill="#EFBFB3" opacity=".5" transform="rotate(-42 16 50)"/>
-      <ellipse cx="32" cy="30" rx="8" ry="3" fill="#B8C88D" opacity=".4" transform="rotate(-50 32 30)"/>
-      <circle cx="58" cy="9" r="3" fill="#EFBFB3" opacity=".65"/>
-    </svg>
     <p class="eyebrow rv">Cuenta regresiva</p>
     <h2 class="script-title rv">Contamos los días</h2>
     <span class="countdown-sub rv">hasta el gran momento</span>
@@ -476,13 +446,6 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 
   <!-- UBICACIÓN -->
   <section id="ubicacion" class="sec sec--surface">
-    <!-- watercolor corner top-right -->
-    <svg style="position:absolute;top:18px;right:14px;width:65px;height:65px;opacity:.4;pointer-events:none" viewBox="0 0 65 65" fill="none">
-      <path d="M60 5 C45 20 25 35 5 60" stroke="#EFBFB3" stroke-width="1.2" opacity=".7"/>
-      <ellipse cx="48" cy="17" rx="9" ry="3.5" fill="#EFBFB3" opacity=".55" transform="rotate(42 48 17)"/>
-      <ellipse cx="32" cy="33" rx="8" ry="3" fill="#B8C88D" opacity=".4" transform="rotate(48 32 33)"/>
-      <circle cx="10" cy="57" r="2.8" fill="#EFBFB3" opacity=".65"/>
-    </svg>
     <p class="eyebrow rv">Dónde Celebramos</p>
     <h2 class="script-title rv">Ubicación</h2>
     <div class="loc-card rv">
@@ -529,17 +492,6 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 
   <!-- ITINERARIO BOTÁNICO -->
   <section id="itinerario" class="sec sec--bg">
-    <!-- Background botanical watercolor splash -->
-    <svg style="position:absolute;top:60px;left:-20px;width:120px;height:180px;opacity:.12;pointer-events:none" viewBox="0 0 120 180" fill="none">
-      <ellipse cx="30" cy="90" rx="28" ry="80" fill="#EFBFB3" transform="rotate(-15 30 90)"/>
-      <ellipse cx="55" cy="60" rx="20" ry="55" fill="#B8C88D" opacity=".7" transform="rotate(10 55 60)"/>
-      <ellipse cx="20" cy="120" rx="15" ry="40" fill="#EFBFB3" opacity=".6" transform="rotate(-25 20 120)"/>
-    </svg>
-    <svg style="position:absolute;top:60px;right:-20px;width:120px;height:180px;opacity:.12;pointer-events:none;transform:scaleX(-1)" viewBox="0 0 120 180" fill="none">
-      <ellipse cx="30" cy="90" rx="28" ry="80" fill="#EFBFB3" transform="rotate(-15 30 90)"/>
-      <ellipse cx="55" cy="60" rx="20" ry="55" fill="#B8C88D" opacity=".7" transform="rotate(10 55 60)"/>
-      <ellipse cx="20" cy="120" rx="15" ry="40" fill="#EFBFB3" opacity=".6" transform="rotate(-25 20 120)"/>
-    </svg>
     <p class="eyebrow rv">Programa del Día</p>
     <h2 class="script-title rv">Itinerario</h2>
     <!-- Botanical sub-ornament -->
@@ -551,7 +503,11 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
         <ellipse cx="80" cy="14" rx="5" ry="2" fill="#B8C88D" opacity=".45" transform="rotate(10 80 14)"/>
       </svg>
     </div>
-    <div class="itin-vine" id="itinVine"></div>
+    <div class="itin-vine-wrap">
+      <div class="itin-vine" id="itinVine">
+        <div class="itin-vine-tip"></div>
+      </div>
+    </div>
     <ul class="itin-list" id="itinList">
       <!-- Evento 1 — izquierda -->
       <li class="itin-event">
@@ -663,38 +619,21 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   <section id="dresscode" class="sec sec--blush">
     <p class="eyebrow rv">Etiqueta</p>
     <h2 class="script-title rv">Dress Code</h2>
-    <p class="dc-subtitle rv">Semi-Formal &middot; Elegante</p>
-    <p class="dc-note rv">¡Queremos que se sientan cómodos y elegantes en este día tan especial!</p>
+    <p class="dc-subtitle rv">Formal</p>
     <div class="dc-cols">
       <div class="dc-col rv">
-        <div class="dc-col-ttl">Para Ellas</div>
+        <div class="dc-col-ttl">Damas</div>
         <ul class="dc-list">
-          <li>Vestidos de cóctel o largos</li>
-          <li>Encaje, chifón o estampados sutiles</li>
-          <li>Tacón, mule o sandalia elegante</li>
+          <li>Por confirmar</li>
         </ul>
       </div>
       <div class="dc-col rv">
-        <div class="dc-col-ttl">Para Ellos</div>
+        <div class="dc-col-ttl">Caballeros</div>
         <ul class="dc-list">
-          <li>Traje o pantalón y saco</li>
-          <li>Sin corbata requerida</li>
-          <li>Camisa de lino o algodón</li>
-          <li>Mocasines o zapatos de vestir</li>
+          <li>Por confirmar</li>
         </ul>
       </div>
     </div>
-    <div class="dc-swatches" id="dcSwatches">
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#EFBFB3"></div><span class="dc-sw-n">Blush Rose</span></div>
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#F5D4CC"></div><span class="dc-sw-n">Rosa Polvo</span></div>
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#83934D"></div><span class="dc-sw-n">Sage Olive</span></div>
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#B8C88D"></div><span class="dc-sw-n">Pine Glade</span></div>
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#C9A84C"></div><span class="dc-sw-n">Mostaza</span></div>
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#C47055"></div><span class="dc-sw-n">Terracota</span></div>
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#2D4A6B"></div><span class="dc-sw-n">Azul Navy</span></div>
-      <div class="dc-sw"><div class="dc-sw-c" style="background:#E9DFB4"></div><span class="dc-sw-n">Rafia</span></div>
-    </div>
-    <p class="dc-avoid rv">Evitar: Blanco &middot; Beige claro &middot; Rojo</p>
     <div class="no-kids rv">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a7 7 0 0 1 13 0"/><line x1="18" y1="3" x2="21" y2="6"/><line x1="21" y1="3" x2="18" y2="6"/></svg>
       <span>Esta celebración es exclusiva para adultos. Agradecemos su comprensión.</span>
@@ -728,6 +667,8 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
         <div class="wheel-item" style="--i:1"><div class="wheel-item-inner"><img src="foto1.jpg" alt="Naomi &amp; Leonardo" loading="lazy"></div></div>
         <div class="wheel-item" style="--i:2"><div class="wheel-item-inner"><img src="foto2.jpg" alt="Naomi &amp; Leonardo" loading="lazy"></div></div>
         <div class="wheel-item" style="--i:3"><div class="wheel-item-inner"><img src="foto3.jpg" alt="Naomi &amp; Leonardo" loading="lazy"></div></div>
+        <div class="wheel-item" style="--i:4"><div class="wheel-item-inner"><img src="foto4.jpg" alt="Naomi &amp; Leonardo" loading="lazy"></div></div>
+        <div class="wheel-item" style="--i:5"><div class="wheel-item-inner"><img src="foto5.jpg" alt="Naomi &amp; Leonardo" loading="lazy"></div></div>
       </div>
       <div class="wheel-hub" aria-hidden="true">
         <svg viewBox="0 0 60 60" fill="none">
@@ -1033,13 +974,12 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 </div>
 
 <!-- MUSIC FAB -->
-<button class="music-fab" id="musicFab" aria-label="Reproducir música de fondo" title="Música — Por confirmar">
+<button class="music-fab" id="musicFab" aria-label="Reproducir música de fondo">
   <svg class="ic-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
   <svg class="ic-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
 </button>
-<audio id="bgAudio" loop preload="auto">
-  <source src="audio.mp3" type="audio/mpeg">
-</audio>
+<!-- YouTube hidden player -->
+<div id="ytplayer" style="position:fixed;left:-9999px;width:1px;height:1px;pointer-events:none;opacity:0" aria-hidden="true"></div>
 <div id="env-flash"></div>
 
 <!-- SCRIPTS -->
@@ -1118,7 +1058,7 @@ function initEnvelope(){
 /* ─── PARTÍCULAS BOTÁNICAS: hojas + estrellas blush ─── */
 (function(){
   const leafColors=['#B8C88D','#83934D','#E9DFB4','#A3B570','#C8D4A0'];
-  const blushColors=['#EFBFB3','#F5D4CC','#F8E2DC'];
+  const blushColors=['#F5C842','#E8B830','#FFD770','#D4A520','#F0C848'];
   const wrap=document.getElementById('petals');
   const prefRed=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   if(prefRed) return;
@@ -1174,15 +1114,44 @@ function tick(){
 }
 tick();setInterval(tick,1000);
 
-/* ─── MUSIC FAB ─── */
+/* ─── MUSIC — YouTube IFrame API ─── */
+var _ytReady=false,_ytStartQueued=false;
+var _ytPlayer=null;
+var _musicFab=document.getElementById('musicFab');
+function onYouTubeIframeAPIReady(){
+  _ytPlayer=new YT.Player('ytplayer',{
+    videoId:'rtOvBOTyX00',
+    playerVars:{autoplay:0,loop:1,playlist:'rtOvBOTyX00',controls:0,disablekb:1,iv_load_policy:3,modestbranding:1},
+    events:{
+      onReady:function(e){
+        _ytReady=true;
+        e.target.setVolume(22);
+        if(_ytStartQueued){e.target.playVideo();_musicFab.classList.add('playing');}
+      },
+      onStateChange:function(e){
+        if(e.data===YT.PlayerState.ENDED){e.target.playVideo();}
+      }
+    }
+  });
+}
 (function(){
-  const audio=document.getElementById('bgAudio');
-  const fab=document.getElementById('musicFab');
-  audio.volume=0.18;
-  function tryPlay(){audio.play().then(()=>fab.classList.add('playing')).catch(()=>{const u=()=>{audio.play().then(()=>fab.classList.add('playing')).catch(()=>{});document.removeEventListener('touchstart',u);document.removeEventListener('click',u);};document.addEventListener('touchstart',u,{once:true});document.addEventListener('click',u,{once:true});});}
-  window._startAudio=tryPlay;
-  fab.addEventListener('click',e=>{e.stopPropagation();if(audio.paused){audio.play().then(()=>fab.classList.add('playing')).catch(()=>{});}else{audio.pause();fab.classList.remove('playing');}});
+  var tag=document.createElement('script');
+  tag.src='https://www.youtube.com/iframe_api';
+  document.head.appendChild(tag);
 })();
+function _ytPlay(){
+  if(_ytReady&&_ytPlayer){_ytPlayer.playVideo();_musicFab.classList.add('playing');}
+  else{_ytStartQueued=true;}
+}
+function _ytPause(){
+  if(_ytReady&&_ytPlayer){_ytPlayer.pauseVideo();_musicFab.classList.remove('playing');}
+  else{_ytStartQueued=false;}
+}
+window._startAudio=_ytPlay;
+_musicFab.addEventListener('click',function(e){
+  e.stopPropagation();
+  if(_musicFab.classList.contains('playing')){_ytPause();}else{_ytPlay();}
+});
 
 /* ─── COPIAR CLABE ─── */
 function copyCLABE(){
@@ -1233,13 +1202,12 @@ function initAll(){
       gsap.fromTo(c,{x:isRight?50:-50,opacity:0},{x:0,opacity:1,duration:.8,ease:'power3.out',delay:i*.15,scrollTrigger:{trigger:itin,start:'top 82%'}});
     });
     gsap.fromTo(leaves,{scale:0,opacity:0},{scale:1,opacity:1,duration:.5,ease:'back.out(2.5)',stagger:.15,delay:.1,scrollTrigger:{trigger:itin,start:'top 82%'}});
-    gsap.fromTo('.itin-vine',{scaleY:0},{scaleY:1,duration:2,ease:'power2.inOut',transformOrigin:'top center',scrollTrigger:{trigger:itin,start:'top 82%',end:'bottom 60%',scrub:.8}});
+    ScrollTrigger.create({trigger:'#itinerario',start:'top 80%',end:'bottom 55%',scrub:1,onUpdate(self){
+      const pct=self.progress*100;
+      const vine=document.getElementById('itinVine');
+      if(vine) vine.style.height=pct+'%';
+    }});
   }
-
-  /* dc swatches */
-  document.querySelectorAll('#dcSwatches .dc-sw-c').forEach((el,i)=>{
-    gsap.fromTo(el,{scale:0,opacity:0},{scale:1,opacity:1,duration:.45,ease:'back.out(2)',delay:i*.08,scrollTrigger:{trigger:'#dcSwatches',start:'top 88%'}});
-  });
 
   /* wheel of fortune */
   const wheelEl=document.getElementById('wheel');
