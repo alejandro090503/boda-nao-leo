@@ -1076,7 +1076,7 @@ function initEnvelope(){
   function checkFlash(){if(flashStarted||!isFinite(envVideo.duration))return;if(envVideo.currentTime>=envVideo.duration-2)startFlash(1.6);}
   function onVideoEnd(){if(!flashStarted)startFlash(.5);}
   function startFlash(dur){flashStarted=true;gsap.to(envFlash,{opacity:1,duration:dur,ease:'power2.in',onComplete:finishSequence});}
-  function finishSequence(){if(finished)return;finished=true;envScreen.style.display='none';mainWrap.style.visibility='visible';initAll();gsap.to(envFlash,{opacity:0,duration:1.2,ease:'power2.out',onComplete(){envFlash.style.display='none';}});}
+  function finishSequence(){if(finished)return;finished=true;envScreen.style.display='none';mainWrap.style.visibility='visible';initAll();if(window._startAudio)window._startAudio();gsap.to(envFlash,{opacity:0,duration:1.2,ease:'power2.out',onComplete(){envFlash.style.display='none';}});}
   envScreen.addEventListener('click',onTap,{passive:false});
   envScreen.addEventListener('touchstart',onTap,{passive:false});
 }
