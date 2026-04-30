@@ -286,6 +286,21 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 .footer-credit{font-family:'Lato',sans-serif;font-weight:300;font-size:11px;letter-spacing:2px;color:var(--blush);opacity:.5;text-decoration:none;display:block;transition:opacity .3s;}
 .footer-credit:hover{opacity:.85}
 
+/* ── MARCOS BOTÁNICOS (pseudo-elementos) ── */
+.bot-frame{position:relative}
+.bot-frame::before,.bot-frame::after{
+  content:'';
+  position:absolute;top:0;bottom:0;width:18px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='64'%3E%3Cline x1='9' y1='0' x2='9' y2='64' stroke='%2383934D' stroke-width='0.75' opacity='0.4'/%3E%3Cellipse cx='4' cy='17' rx='5.5' ry='2' fill='%23B8C88D' opacity='0.52' transform='rotate(-38 4 17)'/%3E%3Cellipse cx='14' cy='42' rx='5.5' ry='2' fill='%23EFBFB3' opacity='0.48' transform='rotate(38 14 42)'/%3E%3Ccircle cx='9' cy='9' r='1.3' fill='%2383934D' opacity='0.38'/%3E%3Ccircle cx='9' cy='55' r='1.3' fill='%2383934D' opacity='0.38'/%3E%3C/svg%3E");
+  background-repeat:repeat-y;
+  background-size:18px 64px;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 14%,black 86%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0%,black 14%,black 86%,transparent 100%);
+  pointer-events:none;z-index:0;opacity:.55;
+}
+.bot-frame::before{left:3px}
+.bot-frame::after{right:3px;transform:scaleX(-1)}
+
 /* ── MUSIC FAB ── */
 .music-fab{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:var(--blush);border:none;cursor:pointer;z-index:998;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(239,191,179,.45);color:#fff;}
 .music-fab::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--blush);animation:fabpulse 2.2s ease-out infinite;z-index:-1;}
@@ -323,9 +338,9 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
     <div class="hero-bg"></div>
     <div class="hero-veil"></div>
     <div class="hero-content">
-      <span class="hero-bride rv">Naomi</span>
+      <span class="hero-bride rv">Leonardo</span>
       <span class="hero-amp rv">&amp;</span>
-      <span class="hero-groom rv">Leonardo</span>
+      <span class="hero-groom rv">Naomi</span>
     </div>
     <div class="scroll-hint" id="scrollHint">
       <span class="scroll-hint-txt">Desliza</span>
@@ -390,7 +405,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   </section>
 
   <!-- COUNTDOWN -->
-  <section id="countdown" class="sec--blush">
+  <section id="countdown" class="sec--blush bot-frame">
     <p class="eyebrow rv">Cuenta regresiva</p>
     <h2 class="script-title rv">Contamos los días</h2>
     <span class="countdown-sub rv">hasta el gran momento</span>
@@ -420,7 +435,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   </div>
 
   <!-- FRASE -->
-  <section id="quote" class="sec sec--bg">
+  <section id="quote" class="sec sec--bg bot-frame">
     <p class="quote-txt rv">
       &ldquo;Elegirte cada día, en cada momento,<br>
       es el más hermoso de mis compromisos.&rdquo;
@@ -616,7 +631,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   </div>
 
   <!-- DRESS CODE -->
-  <section id="dresscode" class="sec sec--blush">
+  <section id="dresscode" class="sec sec--blush bot-frame">
     <p class="eyebrow rv">Etiqueta</p>
     <h2 class="script-title rv">Dress Code</h2>
     <p class="dc-subtitle rv">Formal</p>
@@ -745,7 +760,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   </div>
 
   <!-- ÁLBUM -->
-  <section id="album" class="sec sec--blush">
+  <section id="album" class="sec sec--blush bot-frame">
     <p class="eyebrow rv">Comparte el Momento</p>
     <h2 class="script-title rv">Álbum Compartido</h2>
     <p class="album-note rv">¡Queremos ver la boda a través de tus ojos! Próximamente compartiremos el enlace para que subas tus fotos y videos.</p>
@@ -906,7 +921,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   </div>
 
   <!-- RSVP -->
-  <section id="rsvp" class="sec sec--surface">
+  <section id="rsvp" class="sec sec--surface bot-frame">
     <p class="eyebrow rv">Confirma tu Asistencia</p>
     <h2 class="script-title rv">R.S.V.P.</h2>
     <p class="rsvp-note rv">Fecha límite: 25 de Julio de 2026</p>
@@ -926,7 +941,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
       </div>
       <div class="rsvp-field">
         <label for="rsvpMsg">Mensaje para los novios</label>
-        <textarea id="rsvpMsg" placeholder="Escribe algo especial para Naomi &amp; Leonardo…"></textarea>
+        <textarea id="rsvpMsg" placeholder="Escribe algo especial para Leonardo &amp; Naomi…"></textarea>
       </div>
       <!-- Botón WhatsApp estilo Jardines Botánicos -->
       <button class="btn-wa-bot" onclick="sendRsvp()">
@@ -959,7 +974,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
       <circle cx="186" cy="11" r="2.5" fill="#EFBFB3" opacity=".65"/>
       <circle cx="100" cy="32" r="3" fill="#EFBFB3" opacity=".55"/>
     </svg>
-    <div class="footer-names rv">Naomi &amp; Leonardo</div>
+    <div class="footer-names rv">Leonardo &amp; Naomi</div>
     <div class="footer-date rv">07 &middot; Agosto &middot; 2026</div>
     <div class="footer-hr"></div>
     <a href="https://www.instagram.com/elysium.invitaciones" target="_blank" rel="noopener" class="footer-credit">@elysium.invitaciones</a>
@@ -978,8 +993,9 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   <svg class="ic-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
   <svg class="ic-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
 </button>
-<!-- YouTube hidden player -->
-<div id="ytplayer" style="position:fixed;left:-9999px;width:1px;height:1px;pointer-events:none;opacity:0" aria-hidden="true"></div>
+<audio id="bgAudio" loop preload="auto">
+  <source src="audio.mp3" type="audio/mpeg">
+</audio>
 <div id="env-flash"></div>
 
 <!-- SCRIPTS -->
@@ -1114,44 +1130,15 @@ function tick(){
 }
 tick();setInterval(tick,1000);
 
-/* ─── MUSIC — YouTube IFrame API ─── */
-var _ytReady=false,_ytStartQueued=false;
-var _ytPlayer=null;
-var _musicFab=document.getElementById('musicFab');
-function onYouTubeIframeAPIReady(){
-  _ytPlayer=new YT.Player('ytplayer',{
-    videoId:'rtOvBOTyX00',
-    playerVars:{autoplay:0,loop:1,playlist:'rtOvBOTyX00',controls:0,disablekb:1,iv_load_policy:3,modestbranding:1},
-    events:{
-      onReady:function(e){
-        _ytReady=true;
-        e.target.setVolume(22);
-        if(_ytStartQueued){e.target.playVideo();_musicFab.classList.add('playing');}
-      },
-      onStateChange:function(e){
-        if(e.data===YT.PlayerState.ENDED){e.target.playVideo();}
-      }
-    }
-  });
-}
+/* ─── MUSIC FAB ─── */
 (function(){
-  var tag=document.createElement('script');
-  tag.src='https://www.youtube.com/iframe_api';
-  document.head.appendChild(tag);
+  const audio=document.getElementById('bgAudio');
+  const fab=document.getElementById('musicFab');
+  audio.volume=0.22;
+  function tryPlay(){audio.play().then(()=>fab.classList.add('playing')).catch(()=>{const u=()=>{audio.play().then(()=>fab.classList.add('playing')).catch(()=>{});document.removeEventListener('touchstart',u);document.removeEventListener('click',u);};document.addEventListener('touchstart',u,{once:true});document.addEventListener('click',u,{once:true});});}
+  window._startAudio=tryPlay;
+  fab.addEventListener('click',e=>{e.stopPropagation();if(audio.paused){audio.play().then(()=>fab.classList.add('playing')).catch(()=>{});}else{audio.pause();fab.classList.remove('playing');}});
 })();
-function _ytPlay(){
-  if(_ytReady&&_ytPlayer){_ytPlayer.playVideo();_musicFab.classList.add('playing');}
-  else{_ytStartQueued=true;}
-}
-function _ytPause(){
-  if(_ytReady&&_ytPlayer){_ytPlayer.pauseVideo();_musicFab.classList.remove('playing');}
-  else{_ytStartQueued=false;}
-}
-window._startAudio=_ytPlay;
-_musicFab.addEventListener('click',function(e){
-  e.stopPropagation();
-  if(_musicFab.classList.contains('playing')){_ytPause();}else{_ytPlay();}
-});
 
 /* ─── COPIAR CLABE ─── */
 function copyCLABE(){
@@ -1260,15 +1247,10 @@ function initAll(){
   if(typeof window._startAudio==='function') window._startAudio();
 }
 
-/* ─── BOOT ─── */
+/* ─── BOOT — sobre directo sin loader ─── */
 (function(){
-  const loader=document.getElementById('loader');
-  loader.classList.add('active');
-  window.addEventListener('load',()=>{
-    initLoader();
-  });
-  // fallback if already loaded
-  if(document.readyState==='complete') initLoader();
+  window.addEventListener('load',()=>{initEnvelope();});
+  if(document.readyState==='complete') initEnvelope();
 })();
 </script>
 </body>
