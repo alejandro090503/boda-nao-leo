@@ -1084,7 +1084,8 @@ function initEnvelope(){
 /* ─── PARTÍCULAS BOTÁNICAS: hojas + estrellas blush ─── */
 (function(){
   const leafColors=['#B8C88D','#83934D','#E9DFB4','#A3B570','#C8D4A0'];
-  const blushColors=['#F5C842','#E8B830','#FFD770','#D4A520','#F0C848'];
+  const starColors=['#F5C842','#E8B830','#FFD770','#D4A520','#F0C848'];
+  const ovalColors=['#EFBFB3','#F5D4CC','#F8E2DC','#F0C8BC','#FAD4C8'];
   const wrap=document.getElementById('petals');
   const prefRed=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   if(prefRed) return;
@@ -1097,7 +1098,7 @@ function initEnvelope(){
     const size=isStar?(4+Math.random()*5):(isOval?(5+Math.random()*7):(8+Math.random()*13));
     const h=isStar?size:(isOval?size:(size*(0.9+Math.random()*.6)));
     p.className='petal '+(isStar?'star':(isOval?'oval':'leaf'));
-    const colors=isStar?blushColors:(isOval?blushColors:leafColors);
+    const colors=isStar?starColors:(isOval?ovalColors:leafColors);
     p.style.cssText=[
       `width:${size}px`,`height:${h}px`,
       `left:${Math.random()*100}%`,
