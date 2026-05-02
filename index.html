@@ -25,19 +25,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 <style>
-/* ── FLOREST MOTH PALETTE ── */
+/* ── DARK BOTANICAL PALETTE ── */
 :root{
-  --bg:#F7F3EC;
-  --accent:#83934D;
-  --dark:#44562F;
-  --text:#2C3520;
-  --surface:#F0E8D5;
-  --card:#FEF6F2;      /* blush-tinted white */
+  --bg:#2B3B1C;
+  --accent:#A8BC78;
+  --dark:#F0E8D0;
+  --text:#C5BB9F;
+  --surface:#354922;
+  --card:#374D24;
   --blush:#EFBFB3;
   --blush2:#F5D4CC;
   --pine:#B8C88D;
   --rafia:#E9DFB4;
-  --blush-section:#FAF0EE; /* sections with blush wash */
+  --blush-section:#263616;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -106,7 +106,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 /* ── HERO ── */
 #hero{position:relative;height:100vh;height:100dvh;min-height:600px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:64px;}
 .hero-bg{position:absolute;inset:0;background:url('portada.jpg') center/cover no-repeat;background-color:var(--surface);}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(239,191,179,.05) 0%,rgba(245,242,232,.3) 45%,rgba(247,243,236,.92) 100%);}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(239,191,179,.05) 0%,rgba(43,59,28,.3) 45%,rgba(43,59,28,.93) 100%);}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px}
 .hero-bride{font-family:'Great Vibes',cursive;font-size:clamp(68px,21vw,90px);color:var(--dark);line-height:1;display:block;}
 .hero-amp{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:40px;color:var(--blush);display:block;margin:.08em 0;}
@@ -132,8 +132,12 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 
 /* ── QUOTE ── */
 #quote{padding:72px 36px;text-align:center;background:var(--bg)}
-.quote-txt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;line-height:1.75;color:var(--dark);max-width:340px;margin:0 auto;}
+.quote-intro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;line-height:1.9;color:var(--dark);max-width:340px;margin:0 auto 28px;text-align:center;}
+.quote-divider{width:40px;height:1px;background:linear-gradient(to right,transparent,var(--blush),transparent);margin:0 auto 24px;}
+.quote-txt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;line-height:1.8;color:var(--text);max-width:340px;margin:0 auto;}
+.quote-ref{display:block;font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:3px;color:var(--accent);margin-top:16px;text-transform:uppercase;}
 .quote-sig{font-family:'Great Vibes',cursive;font-size:38px;color:var(--blush);margin-top:22px;display:block;}
+.rsvp-field input::placeholder,.rsvp-field select::placeholder,.rsvp-field textarea::placeholder{color:var(--text);opacity:.45}
 
 /* ── UBICACIÓN ── */
 #ubicacion{padding:64px 28px;text-align:center;background:var(--surface)}
@@ -183,10 +187,10 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 .dc-list{list-style:none}
 .dc-list li{font-family:'Lato',sans-serif;font-weight:300;font-size:12px;color:var(--text);padding:3px 0 3px 14px;position:relative;line-height:1.4;}
 .dc-list li::before{content:'·';position:absolute;left:4px;color:var(--blush)}
-.dc-swatches{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:20px;}
-.dc-sw{display:flex;flex-direction:column;align-items:center;gap:5px}
-.dc-sw-c{width:34px;height:34px;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.12);}
-.dc-sw-n{font-family:'Lato',sans-serif;font-weight:300;font-size:9px;letter-spacing:.5px;color:var(--text);text-align:center;max-width:50px;line-height:1.3;}
+.dc-swatches{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 10px;padding-top:4px;}
+.dc-sw{display:flex;flex-direction:column;align-items:center;gap:4px}
+.dc-sw-c{width:30px;height:30px;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+.dc-sw-n{font-family:'Lato',sans-serif;font-weight:300;font-size:8px;letter-spacing:.3px;color:var(--text);text-align:center;max-width:46px;line-height:1.3;}
 .dc-avoid{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:#c0625a;text-align:center;}
 .no-kids{display:flex;align-items:center;gap:12px;background:rgba(239,191,179,.15);border:1px solid rgba(239,191,179,.4);border-radius:14px;padding:14px 18px;margin-top:24px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--dark);text-align:left;line-height:1.5;}
 .no-kids svg{width:22px;height:22px;flex-shrink:0;stroke:var(--blush);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;}
@@ -230,7 +234,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 .gift-stores{display:flex;flex-direction:column;gap:12px;margin-top:4px}
 .btn-store{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:15px 24px;border-radius:50px;text-decoration:none;font-family:'Lato',sans-serif;font-weight:400;font-size:14px;letter-spacing:2px;text-transform:uppercase;transition:opacity .25s;}
 .btn-amazon{background:var(--surface);color:var(--dark);border:1.5px solid rgba(239,191,179,.4)}
-.btn-liverpool{background:var(--dark);color:#fff}
+.btn-liverpool{background:#44562F;color:#F0E8D0}
 .btn-store svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
 .btn-pending{opacity:.45;cursor:default;pointer-events:none;border:1.5px dashed rgba(239,191,179,.35)!important;background:var(--surface)!important;color:var(--dark)!important;}
 .por-confirmar-tag{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;letter-spacing:2px;color:var(--blush);opacity:.75;text-align:center;margin-top:-4px;}
@@ -257,8 +261,8 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 /* Botón WhatsApp estilo Jardines Botánicos */
 .btn-wa-bot{
   display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:8px;
-  background:linear-gradient(135deg,var(--dark) 0%,#5a7438 50%,var(--dark) 100%);
-  color:#fff;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#44562F 0%,#5a7438 50%,#44562F 100%);
+  color:#F0E8D0;border:none;cursor:pointer;
   font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;letter-spacing:2px;
   padding:17px 24px;border-radius:50px;
   transition:box-shadow .35s,transform .25s;
@@ -291,12 +295,12 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 .bot-frame::before,.bot-frame::after{
   content:'';
   position:absolute;top:0;bottom:0;width:18px;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='64'%3E%3Cline x1='9' y1='0' x2='9' y2='64' stroke='%2383934D' stroke-width='0.75' opacity='0.4'/%3E%3Cellipse cx='4' cy='17' rx='5.5' ry='2' fill='%23B8C88D' opacity='0.52' transform='rotate(-38 4 17)'/%3E%3Cellipse cx='14' cy='42' rx='5.5' ry='2' fill='%23EFBFB3' opacity='0.48' transform='rotate(38 14 42)'/%3E%3Ccircle cx='9' cy='9' r='1.3' fill='%2383934D' opacity='0.38'/%3E%3Ccircle cx='9' cy='55' r='1.3' fill='%2383934D' opacity='0.38'/%3E%3C/svg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='64'%3E%3Cline x1='9' y1='0' x2='9' y2='64' stroke='%23A8BC78' stroke-width='0.75' opacity='0.5'/%3E%3Cellipse cx='4' cy='17' rx='5.5' ry='2' fill='%23B8C88D' opacity='0.6' transform='rotate(-38 4 17)'/%3E%3Cellipse cx='14' cy='42' rx='5.5' ry='2' fill='%23EFBFB3' opacity='0.55' transform='rotate(38 14 42)'/%3E%3Ccircle cx='9' cy='9' r='1.3' fill='%23A8BC78' opacity='0.5'/%3E%3Ccircle cx='9' cy='55' r='1.3' fill='%23A8BC78' opacity='0.5'/%3E%3C/svg%3E");
   background-repeat:repeat-y;
   background-size:18px 64px;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 14%,black 86%,transparent 100%);
   mask-image:linear-gradient(to bottom,transparent 0%,black 14%,black 86%,transparent 100%);
-  pointer-events:none;z-index:0;opacity:.55;
+  pointer-events:none;z-index:0;opacity:.75;
 }
 .bot-frame::before{left:3px}
 .bot-frame::after{right:3px;transform:scaleX(-1)}
@@ -353,18 +357,18 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   <!-- ORNAMENTO BOTÁNICO -->
   <div class="ornament">
     <svg viewBox="0 0 360 68" fill="none" width="340" height="68">
-      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
-      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
-      <path d="M138 38 C130 27 122 20 116 12" stroke="#83934D" stroke-width=".85" opacity=".45"/>
-      <path d="M108 24 C100 18 94 12 90 6" stroke="#83934D" stroke-width=".85" opacity=".45"/>
+      <path d="M180 62 C158 44 118 35 68 16" stroke="#B8C88D" stroke-width="1.2" opacity=".4"/>
+      <path d="M180 62 C202 44 242 35 292 16" stroke="#B8C88D" stroke-width="1.2" opacity=".4"/>
+      <path d="M138 38 C130 27 122 20 116 12" stroke="#A8BC78" stroke-width=".85" opacity=".45"/>
+      <path d="M108 24 C100 18 94 12 90 6" stroke="#A8BC78" stroke-width=".85" opacity=".45"/>
       <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".55" transform="rotate(-32 152 33)"/>
       <ellipse cx="124" cy="22" rx="11" ry="4.5" fill="#B8C88D" opacity=".45" transform="rotate(-45 124 22)"/>
       <ellipse cx="96" cy="13" rx="9" ry="3.5" fill="#EFBFB3" opacity=".4" transform="rotate(-55 96 13)"/>
       <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".55" transform="rotate(32 208 33)"/>
       <ellipse cx="236" cy="22" rx="11" ry="4.5" fill="#B8C88D" opacity=".45" transform="rotate(45 236 22)"/>
       <ellipse cx="264" cy="13" rx="9" ry="3.5" fill="#EFBFB3" opacity=".4" transform="rotate(55 264 13)"/>
-      <path d="M222 38 C230 27 238 20 244 12" stroke="#83934D" stroke-width=".85" opacity=".45"/>
-      <path d="M252 24 C260 18 266 12 270 6" stroke="#83934D" stroke-width=".85" opacity=".45"/>
+      <path d="M222 38 C230 27 238 20 244 12" stroke="#A8BC78" stroke-width=".85" opacity=".45"/>
+      <path d="M252 24 C260 18 266 12 270 6" stroke="#A8BC78" stroke-width=".85" opacity=".45"/>
       <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".8"/>
       <circle cx="113" cy="9" r="1.8" fill="#F5D4CC" opacity=".6"/>
       <circle cx="118" cy="8" r="1.8" fill="#F5D4CC" opacity=".6"/>
@@ -373,8 +377,8 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
       <circle cx="241" cy="9" r="1.8" fill="#F5D4CC" opacity=".6"/>
       <circle cx="246" cy="8" r="1.8" fill="#F5D4CC" opacity=".6"/>
       <circle cx="270" cy="6" r="2.8" fill="#EFBFB3" opacity=".7"/>
-      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".45"/>
-      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".35"/>
+      <circle cx="180" cy="52" r="3.5" fill="#A8BC78" opacity=".45"/>
+      <path d="M180 62 L180 52" stroke="#A8BC78" stroke-width="1" opacity=".35"/>
     </svg>
   </div>
 
@@ -420,8 +424,8 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   <!-- ORNAMENTO -->
   <div class="ornament ornament--s2b">
     <svg viewBox="0 0 260 36" fill="none" width="260" height="36">
-      <path d="M20 18 Q66 14 112 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
-      <path d="M148 18 Q194 14 240 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <path d="M20 18 Q66 14 112 18" stroke="#A8BC78" stroke-width=".9" opacity=".35"/>
+      <path d="M148 18 Q194 14 240 18" stroke="#A8BC78" stroke-width=".9" opacity=".35"/>
       <ellipse cx="58" cy="12" rx="9" ry="3.5" fill="#EFBFB3" opacity=".55" transform="rotate(-18 58 12)"/>
       <ellipse cx="85" cy="22" rx="7" ry="3" fill="#B8C88D" opacity=".4" transform="rotate(12 85 22)"/>
       <rect x="125" y="11" width="10" height="10" rx="1.5" transform="rotate(45 130 16)" fill="#EFBFB3" opacity=".4"/>
@@ -436,26 +440,30 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 
   <!-- FRASE -->
   <section id="quote" class="sec sec--bg bot-frame">
-    <p class="quote-txt rv">
-      &ldquo;Elegirte cada día, en cada momento,<br>
-      es el más hermoso de mis compromisos.&rdquo;
+    <p class="quote-intro rv">
+      Dios escribió nuestra historia con amor, paciencia y propósito…<br>
+      y en Su perfecto tiempo, unió nuestros caminos para siempre.
     </p>
-    <span class="quote-sig rv">Naomi &amp; Leonardo</span>
+    <div class="quote-divider rv"></div>
+    <p class="quote-txt rv">
+      &ldquo;Es mejor ser dos que uno, porque ambos pueden ayudarse mutuamente a lograr el éxito. Alguien que está solo puede ser atacado y vencido, pero si son dos, se ponen de espalda con espalda y vencen; mejor todavía si son tres, porque una cuerda triple no se corta fácilmente.&rdquo;
+    </p>
+    <span class="quote-ref rv">Eclesiastés 4:9, 12 · NTV</span>
   </section>
 
   <!-- ORNAMENTO -->
   <div class="ornament ornament--b2s">
     <svg viewBox="0 0 360 68" fill="none" width="340" height="68">
-      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
-      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
-      <path d="M138 38 C130 27 122 20 116 12" stroke="#83934D" stroke-width=".85" opacity=".4"/>
-      <path d="M222 38 C230 27 238 20 244 12" stroke="#83934D" stroke-width=".85" opacity=".4"/>
+      <path d="M180 62 C158 44 118 35 68 16" stroke="#B8C88D" stroke-width="1.2" opacity=".4"/>
+      <path d="M180 62 C202 44 242 35 292 16" stroke="#B8C88D" stroke-width="1.2" opacity=".4"/>
+      <path d="M138 38 C130 27 122 20 116 12" stroke="#A8BC78" stroke-width=".85" opacity=".4"/>
+      <path d="M222 38 C230 27 238 20 244 12" stroke="#A8BC78" stroke-width=".85" opacity=".4"/>
       <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".5" transform="rotate(-32 152 33)"/>
       <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".5" transform="rotate(32 208 33)"/>
       <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".78"/>
       <circle cx="244" cy="12" r="3.2" fill="#EFBFB3" opacity=".78"/>
-      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".4"/>
-      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".35"/>
+      <circle cx="180" cy="52" r="3.5" fill="#A8BC78" opacity=".4"/>
+      <path d="M180 62 L180 52" stroke="#A8BC78" stroke-width="1" opacity=".35"/>
     </svg>
   </div>
 
@@ -491,15 +499,15 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   <!-- ORNAMENTO -->
   <div class="ornament ornament--s2b">
     <svg viewBox="0 0 260 36" fill="none" width="260" height="36">
-      <path d="M20 18 Q66 14 112 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
-      <path d="M148 18 Q194 14 240 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <path d="M20 18 Q66 14 112 18" stroke="#A8BC78" stroke-width=".9" opacity=".35"/>
+      <path d="M148 18 Q194 14 240 18" stroke="#A8BC78" stroke-width=".9" opacity=".35"/>
       <ellipse cx="58" cy="12" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(-18 58 12)"/>
-      <ellipse cx="85" cy="22" rx="7" ry="3" fill="#83934D" opacity=".35" transform="rotate(12 85 22)"/>
+      <ellipse cx="85" cy="22" rx="7" ry="3" fill="#A8BC78" opacity=".35" transform="rotate(12 85 22)"/>
       <rect x="125" y="11" width="10" height="10" rx="1.5" transform="rotate(45 130 16)" fill="#EFBFB3" opacity=".45"/>
       <ellipse cx="130" cy="6" rx="4" ry="2" fill="#B8C88D" opacity=".45"/>
       <ellipse cx="130" cy="26" rx="4" ry="2" fill="#B8C88D" opacity=".45"/>
       <ellipse cx="202" cy="12" rx="9" ry="3.5" fill="#B8C88D" opacity=".5" transform="rotate(18 202 12)"/>
-      <ellipse cx="175" cy="22" rx="7" ry="3" fill="#83934D" opacity=".35" transform="rotate(-12 175 22)"/>
+      <ellipse cx="175" cy="22" rx="7" ry="3" fill="#A8BC78" opacity=".35" transform="rotate(-12 175 22)"/>
       <circle cx="20" cy="18" r="2.2" fill="#EFBFB3" opacity=".6"/>
       <circle cx="240" cy="18" r="2.2" fill="#EFBFB3" opacity=".6"/>
     </svg>
@@ -620,8 +628,8 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   <!-- ORNAMENTO -->
   <div class="ornament ornament--b2s">
     <svg viewBox="0 0 260 36" fill="none" width="260" height="36">
-      <path d="M20 18 Q66 14 112 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
-      <path d="M148 18 Q194 14 240 18" stroke="#83934D" stroke-width=".9" opacity=".35"/>
+      <path d="M20 18 Q66 14 112 18" stroke="#A8BC78" stroke-width=".9" opacity=".35"/>
+      <path d="M148 18 Q194 14 240 18" stroke="#A8BC78" stroke-width=".9" opacity=".35"/>
       <ellipse cx="58" cy="12" rx="9" ry="3.5" fill="#EFBFB3" opacity=".55" transform="rotate(-18 58 12)"/>
       <ellipse cx="202" cy="12" rx="9" ry="3.5" fill="#EFBFB3" opacity=".55" transform="rotate(18 202 12)"/>
       <rect x="125" y="11" width="10" height="10" rx="1.5" transform="rotate(45 130 16)" fill="#EFBFB3" opacity=".5"/>
@@ -638,15 +646,24 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
     <div class="dc-cols">
       <div class="dc-col rv">
         <div class="dc-col-ttl">Damas</div>
-        <ul class="dc-list">
-          <li>Por confirmar</li>
-        </ul>
+        <div class="dc-swatches">
+          <div class="dc-sw"><span class="dc-sw-c" style="background:#D4848A"></span><span class="dc-sw-n">Dusty Rose</span></div>
+          <div class="dc-sw"><span class="dc-sw-c" style="background:#8B4F62"></span><span class="dc-sw-n">Mauve</span></div>
+          <div class="dc-sw"><span class="dc-sw-c" style="background:#9C8B7A"></span><span class="dc-sw-n">Taupe</span></div>
+          <div class="dc-sw"><span class="dc-sw-c" style="background:#F6F0E6;box-shadow:0 0 0 1px rgba(197,187,159,.4)"></span><span class="dc-sw-n">Ivory</span></div>
+          <div class="dc-sw"><span class="dc-sw-c" style="background:#C97B5A"></span><span class="dc-sw-n">Terracotta</span></div>
+          <div class="dc-sw"><span class="dc-sw-c" style="background:#7A2B3C"></span><span class="dc-sw-n">Deep Wine</span></div>
+        </div>
       </div>
       <div class="dc-col rv">
         <div class="dc-col-ttl">Caballeros</div>
-        <ul class="dc-list">
-          <li>Por confirmar</li>
-        </ul>
+        <div class="dc-swatches">
+          <div class="dc-sw"><span class="dc-sw-c" style="background:#223348"></span><span class="dc-sw-n">Midnight Navy</span></div>
+          <div class="dc-sw"><span class="dc-sw-c" style="background:#7397A8"></span><span class="dc-sw-n">Fresco Blue</span></div>
+          <div class="dc-sw"><span class="dc-sw-c" style="background:#C97B5A"></span><span class="dc-sw-n">Terracotta</span></div>
+          <div class="dc-sw"><span class="dc-sw-c" style="background:#F6F0E6;box-shadow:0 0 0 1px rgba(197,187,159,.4)"></span><span class="dc-sw-n">Cream</span></div>
+          <div class="dc-sw"><span class="dc-sw-c" style="background:#AB8A3B"></span><span class="dc-sw-n">Antique Gold</span></div>
+        </div>
       </div>
     </div>
     <div class="no-kids rv">
@@ -658,16 +675,16 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   <!-- ORNAMENTO -->
   <div class="ornament" style="background:linear-gradient(to bottom,var(--blush-section),var(--surface))">
     <svg viewBox="0 0 360 68" fill="none" width="340" height="68">
-      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
-      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
-      <path d="M138 38 C130 27 122 20 116 12" stroke="#83934D" stroke-width=".85" opacity=".4"/>
-      <path d="M222 38 C230 27 238 20 244 12" stroke="#83934D" stroke-width=".85" opacity=".4"/>
+      <path d="M180 62 C158 44 118 35 68 16" stroke="#B8C88D" stroke-width="1.2" opacity=".4"/>
+      <path d="M180 62 C202 44 242 35 292 16" stroke="#B8C88D" stroke-width="1.2" opacity=".4"/>
+      <path d="M138 38 C130 27 122 20 116 12" stroke="#A8BC78" stroke-width=".85" opacity=".4"/>
+      <path d="M222 38 C230 27 238 20 244 12" stroke="#A8BC78" stroke-width=".85" opacity=".4"/>
       <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".55" transform="rotate(-32 152 33)"/>
       <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".55" transform="rotate(32 208 33)"/>
       <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".8"/>
       <circle cx="244" cy="12" r="3.2" fill="#EFBFB3" opacity=".8"/>
-      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".4"/>
-      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".35"/>
+      <circle cx="180" cy="52" r="3.5" fill="#A8BC78" opacity=".4"/>
+      <path d="M180 62 L180 52" stroke="#A8BC78" stroke-width="1" opacity=".35"/>
     </svg>
   </div>
 
@@ -706,16 +723,16 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   <!-- ORNAMENTO -->
   <div class="ornament ornament--s2b">
     <svg viewBox="0 0 360 68" fill="none" width="340" height="68">
-      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
-      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
-      <path d="M138 38 C130 27 122 20 116 12" stroke="#83934D" stroke-width=".85" opacity=".4"/>
-      <path d="M222 38 C230 27 238 20 244 12" stroke="#83934D" stroke-width=".85" opacity=".4"/>
+      <path d="M180 62 C158 44 118 35 68 16" stroke="#B8C88D" stroke-width="1.2" opacity=".4"/>
+      <path d="M180 62 C202 44 242 35 292 16" stroke="#B8C88D" stroke-width="1.2" opacity=".4"/>
+      <path d="M138 38 C130 27 122 20 116 12" stroke="#A8BC78" stroke-width=".85" opacity=".4"/>
+      <path d="M222 38 C230 27 238 20 244 12" stroke="#A8BC78" stroke-width=".85" opacity=".4"/>
       <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".55" transform="rotate(-32 152 33)"/>
       <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".55" transform="rotate(32 208 33)"/>
       <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".8"/>
       <circle cx="244" cy="12" r="3.2" fill="#EFBFB3" opacity=".8"/>
-      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".4"/>
-      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".35"/>
+      <circle cx="180" cy="52" r="3.5" fill="#A8BC78" opacity=".4"/>
+      <path d="M180 62 L180 52" stroke="#A8BC78" stroke-width="1" opacity=".35"/>
     </svg>
   </div>
 
@@ -755,14 +772,14 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   <!-- ORNAMENTO -->
   <div class="ornament ornament--b2s">
     <svg viewBox="0 0 360 68" fill="none" width="340" height="68">
-      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".35"/>
-      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".35"/>
+      <path d="M180 62 C158 44 118 35 68 16" stroke="#B8C88D" stroke-width="1.2" opacity=".35"/>
+      <path d="M180 62 C202 44 242 35 292 16" stroke="#B8C88D" stroke-width="1.2" opacity=".35"/>
       <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".5" transform="rotate(-32 152 33)"/>
       <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".5" transform="rotate(32 208 33)"/>
       <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".75"/>
       <circle cx="244" cy="12" r="3.2" fill="#EFBFB3" opacity=".75"/>
-      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".4"/>
-      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".35"/>
+      <circle cx="180" cy="52" r="3.5" fill="#A8BC78" opacity=".4"/>
+      <path d="M180 62 L180 52" stroke="#A8BC78" stroke-width="1" opacity=".35"/>
     </svg>
   </div>
 
@@ -800,13 +817,13 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
         <!-- QR placeholder con patrón SVG -->
         <svg viewBox="0 0 180 180" fill="none" style="width:180px;height:180px;border-radius:12px;background:#FDFAF8;border:1.5px solid rgba(239,191,179,.4)">
           <!-- Finder squares -->
-          <rect x="12" y="12" width="46" height="46" rx="4" fill="none" stroke="#44562F" stroke-width="2.5"/>
+          <rect x="12" y="12" width="46" height="46" rx="4" fill="none" stroke="#B8C88D" stroke-width="2.5"/>
           <rect x="18" y="18" width="34" height="34" rx="2" fill="#44562F" opacity=".12"/>
           <rect x="24" y="24" width="22" height="22" rx="1.5" fill="#44562F" opacity=".7"/>
-          <rect x="122" y="12" width="46" height="46" rx="4" fill="none" stroke="#44562F" stroke-width="2.5"/>
+          <rect x="122" y="12" width="46" height="46" rx="4" fill="none" stroke="#B8C88D" stroke-width="2.5"/>
           <rect x="128" y="18" width="34" height="34" rx="2" fill="#44562F" opacity=".12"/>
           <rect x="134" y="24" width="22" height="22" rx="1.5" fill="#44562F" opacity=".7"/>
-          <rect x="12" y="122" width="46" height="46" rx="4" fill="none" stroke="#44562F" stroke-width="2.5"/>
+          <rect x="12" y="122" width="46" height="46" rx="4" fill="none" stroke="#B8C88D" stroke-width="2.5"/>
           <rect x="18" y="128" width="34" height="34" rx="2" fill="#44562F" opacity=".12"/>
           <rect x="24" y="134" width="22" height="22" rx="1.5" fill="#44562F" opacity=".7"/>
           <!-- Data modules pattern -->
@@ -905,7 +922,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
           <circle cx="90" cy="90" r="16" fill="#EFBFB3" opacity=".18"/>
           <circle cx="90" cy="90" r="10" fill="#EFBFB3" opacity=".25"/>
           <!-- Hojita central -->
-          <ellipse cx="90" cy="90" rx="6" ry="10" fill="#83934D" opacity=".55" transform="rotate(-20 90 90)"/>
+          <ellipse cx="90" cy="90" rx="6" ry="10" fill="#A8BC78" opacity=".55" transform="rotate(-20 90 90)"/>
           <ellipse cx="90" cy="90" rx="4" ry="7" fill="#B8C88D" opacity=".4" transform="rotate(30 90 90)"/>
         </svg>
         <p style="position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:9px;letter-spacing:2px;color:var(--blush);white-space:nowrap;opacity:.8">Por confirmar</p>
@@ -917,16 +934,16 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   <!-- ORNAMENTO -->
   <div class="ornament" style="background:linear-gradient(to bottom,var(--blush-section),var(--surface))">
     <svg viewBox="0 0 360 68" fill="none" width="340" height="68">
-      <path d="M180 62 C158 44 118 35 68 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
-      <path d="M180 62 C202 44 242 35 292 16" stroke="#44562F" stroke-width="1.2" opacity=".4"/>
-      <path d="M138 38 C130 27 122 20 116 12" stroke="#83934D" stroke-width=".85" opacity=".4"/>
-      <path d="M222 38 C230 27 238 20 244 12" stroke="#83934D" stroke-width=".85" opacity=".4"/>
+      <path d="M180 62 C158 44 118 35 68 16" stroke="#B8C88D" stroke-width="1.2" opacity=".4"/>
+      <path d="M180 62 C202 44 242 35 292 16" stroke="#B8C88D" stroke-width="1.2" opacity=".4"/>
+      <path d="M138 38 C130 27 122 20 116 12" stroke="#A8BC78" stroke-width=".85" opacity=".4"/>
+      <path d="M222 38 C230 27 238 20 244 12" stroke="#A8BC78" stroke-width=".85" opacity=".4"/>
       <ellipse cx="152" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".55" transform="rotate(-32 152 33)"/>
       <ellipse cx="208" cy="33" rx="13" ry="5.5" fill="#EFBFB3" opacity=".55" transform="rotate(32 208 33)"/>
       <circle cx="116" cy="12" r="3.2" fill="#EFBFB3" opacity=".8"/>
       <circle cx="244" cy="12" r="3.2" fill="#EFBFB3" opacity=".8"/>
-      <circle cx="180" cy="52" r="3.5" fill="#83934D" opacity=".4"/>
-      <path d="M180 62 L180 52" stroke="#83934D" stroke-width="1" opacity=".35"/>
+      <circle cx="180" cy="52" r="3.5" fill="#A8BC78" opacity=".4"/>
+      <path d="M180 62 L180 52" stroke="#A8BC78" stroke-width="1" opacity=".35"/>
     </svg>
   </div>
 
