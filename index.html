@@ -297,6 +297,12 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
 .bot-frame::before{left:3px}
 .bot-frame::after{right:3px;transform:scaleX(-1)}
 
+/* ── GALLERY LIGHTBOX ── */
+#gallery-lightbox{position:fixed;inset:0;z-index:800;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+#gallery-lightbox.open{pointer-events:all;}
+#gallery-lb-overlay{position:absolute;inset:0;background:rgba(0,0,0,.82);opacity:0;cursor:pointer;}
+#gallery-lb-img{position:relative;z-index:1;max-width:92vw;max-height:88vh;object-fit:contain;border-radius:4px;box-shadow:0 24px 64px rgba(0,0,0,.7);opacity:0;transform:scale(.85);cursor:pointer;}
+
 /* ── MUSIC FAB ── */
 .music-fab{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:var(--blush);border:none;cursor:pointer;z-index:998;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(239,191,179,.45);color:#fff;}
 .music-fab::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--blush);animation:fabpulse 2.2s ease-out infinite;z-index:-1;}
@@ -456,7 +462,7 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
         <span class="drop-photo-label">Nuestra historia</span>
       </div>
     </div>
-    <span class="drop-hint rv" id="dropHint">Toca cada foto para enfocarla</span>
+    <span class="drop-hint rv" id="dropHint">Toca cada foto para expandirla</span>
   </section>
 
   <!-- ORNAMENTO -->
@@ -834,6 +840,12 @@ body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;font-w
   </footer>
 </div><!-- /.wrap -->
 
+<!-- GALLERY LIGHTBOX -->
+<div id="gallery-lightbox">
+  <div id="gallery-lb-overlay"></div>
+  <img id="gallery-lb-img" src="" alt="Foto ampliada">
+</div>
+
 <!-- MUSIC FAB -->
 <button class="music-fab" id="musicFab" aria-label="Reproducir música de fondo">
   <svg class="ic-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1071,17 +1083,30 @@ function initAll(){
         });
       }
     });
-    photos.forEach((p,i)=>{
+    const lightbox=document.getElementById('gallery-lightbox');
+    const lbImg=document.getElementById('gallery-lb-img');
+    const lbOverlay=document.getElementById('gallery-lb-overlay');
+
+    function openLightbox(src){
+      lbImg.src=src;
+      lightbox.classList.add('open');
+      gsap.to(lbOverlay,{opacity:1,duration:.35,ease:'power2.out'});
+      gsap.fromTo(lbImg,{scale:.82,opacity:0},{scale:1,opacity:1,duration:.4,ease:'back.out(1.4)'});
+    }
+    function closeLightbox(){
+      gsap.to(lbImg,{scale:.88,opacity:0,duration:.25,ease:'power2.in'});
+      gsap.to(lbOverlay,{opacity:0,duration:.3,ease:'power2.in',onComplete(){
+        lightbox.classList.remove('open');
+        lbImg.src='';
+      }});
+    }
+    lbOverlay.addEventListener('click',closeLightbox);
+    lbImg.addEventListener('click',closeLightbox);
+
+    photos.forEach((p)=>{
       p.el.addEventListener('click',()=>{
-        const focused=p.el.classList.contains('focused');
-        photos.forEach((pp,j)=>{
-          pp.el.classList.remove('focused');
-          gsap.to(pp.el,{scale:1,zIndex:j+1,duration:.35,ease:'power2.out'});
-        });
-        if(!focused){
-          p.el.classList.add('focused');
-          gsap.to(p.el,{scale:1.08,zIndex:10,duration:.35,ease:'back.out(1.5)'});
-        }
+        const src=p.el.querySelector('img').src;
+        openLightbox(src);
       });
     });
   })();
